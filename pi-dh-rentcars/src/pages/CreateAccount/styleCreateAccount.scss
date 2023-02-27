@@ -1,0 +1,79 @@
+$color-primary: #1DBEB4;
+$color-secondary: #383B58;
+$color-tertiary: #545776;
+$color-quaternary: #F3F1ED;
+$color-quintenary: #FFFFFF;
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-quintenary;
+}
+
+.register-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+  width: 400px;
+}
+
+.register-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.register-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register-form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.register-form button {
+  background-color: #1DBEB4;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.register-form button:hover {
+  background-color: #19a8a0;
+}
+
+.login-link {
+  color: #545776;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link a {
+  color: #1DBEB4;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,74 @@
+.headerStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #000;
+  height: 80px;
+  padding: 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-bottom: #000;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  
+
+  .header_left,
+  .header_right {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    
+  }
+
+  .header_left img {
+    height: 60px;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  .slogan {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #545776;
+    margin-left: 10px;
+  }
+  
+
+  .header_right {
+    gap: 20px;
+  }
+
+  .btn-login.padding {
+    margin-right: 40px;
+  }
+
+  .btn-login,
+  .btn-create-account {
+    width: 206px;
+    height: 40px;
+    background: #fff;
+    color: #1dbeb4;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #1dbeb4;
+
+    &:hover {
+      background-color: #1dbeb4;
+      color: #fff;
+      border: 1px solid #1dbeb4;
+    }
+  }
+}
+
+
