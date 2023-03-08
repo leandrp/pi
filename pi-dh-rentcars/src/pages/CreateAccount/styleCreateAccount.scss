@@ -1,15 +1,19 @@
-$color-primary: #1DBEB4;
-$color-secondary: #383B58;
+// Define color variables for easy customization
+$color-primary: #1dbeb4;
+$color-secondary: #383b58;
 $color-tertiary: #545776;
-$color-quaternary: #F3F1ED;
-$color-quintenary: #FFFFFF;
+$color-quaternary: #f3f1ed;
+$color-quintenary: #ffffff;
+
+// Use variables throughout the stylesheet to maintain consistency in color scheme
 
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: $color-quintenary;
+  background: rgba(196, 196, 196, 0.1);
+  width: 100%;
 }
 
 .register-form {
@@ -19,14 +23,28 @@ $color-quintenary: #FFFFFF;
   transform: translate(-50%, -50%);
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
-  width: 400px;
+  width: 448px;
+  background-color: transparent;
+
+  // Add media query to make the form responsive
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .register-form h2 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  color: $color-primary;
+
+  // Add media query to make the heading responsive
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 .register-form label {
@@ -34,6 +52,11 @@ $color-quintenary: #FFFFFF;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
+
+  // Add media query to make the labels responsive
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .register-form input {
@@ -43,10 +66,28 @@ $color-quintenary: #FFFFFF;
   padding: 10px;
   width: 100%;
   margin-bottom: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  background-color: $color-quintenary;
+
+  // Add media query to make the inputs responsive
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex-basis: 49%;
 }
 
 .register-form button {
-  background-color: #1DBEB4;
+  background-color: $color-primary;
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -56,24 +97,42 @@ $color-quintenary: #FFFFFF;
   padding: 10px 20px;
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
-  width: 100%;
-}
+  width: 206px;
+  display: block;
+  margin: 0 auto;
 
-.register-form button:hover {
-  background-color: #19a8a0;
+  // Add media query to make the button responsive
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: darken(
+      $color-primary,
+      10%
+    ); // Use Sass function to darken color on hover
+  }
 }
 
 .login-link {
-  color: #545776;
+  color: $color-tertiary;
   font-size: 14px;
   text-align: center;
-}
 
-.login-link a {
-  color: #1DBEB4;
-  text-decoration: none;
-}
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 
-.login-link a:hover {
-  text-decoration: underline;
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

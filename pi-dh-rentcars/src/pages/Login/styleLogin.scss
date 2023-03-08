@@ -1,11 +1,16 @@
-$background-color: #C4C4C4;
+$color-primary: #1dbeb4;
+$color-secondary: #383b58;
+$color-tertiary: #545776;
+$color-quaternary: #f3f1ed;
+$color-quintenary: #ffffff;
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
+  background: rgba(196, 196, 196, 0.1);
+  width: 100%;
 }
 
 .login-form {
@@ -13,24 +18,40 @@ $background-color: #C4C4C4;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // background-color: #C4C4C4;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
-  width: 400px;
+  width: 468px;
+  background-color: transparent;
+
+  // adjust styles for small screens
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .login-form h2 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 20px auto;
+  color: $color-primary;
+
+  // adjust font size for small screens
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 .login-form label {
-  display: block;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
+
+  // adjust font size for small screens
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .login-form input {
@@ -40,10 +61,19 @@ $background-color: #C4C4C4;
   padding: 10px;
   width: 100%;
   margin-bottom: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  background-color: $color-quintenary;
+  width: 448px;
+
+  // adjust font size and padding for small screens
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
 
 .login-form button {
-  background-color: #1DBEB4;
+  background-color: $color-primary;
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -51,26 +81,47 @@ $background-color: #C4C4C4;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
-  margin-bottom: 20px;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: 206px;
+  display: block;
+  margin: 0 auto;
+
+  // adjust font size and padding for small screens
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: darken(
+      $color-primary,
+      10%
+    ); // Use Sass function to darken color on hover
+  }
 }
 
-.login-form button:hover {
-  background-color: #19a8a0;
-}
-
-.signup-link {
-  color: #545776;
+.register-link {
+  color: $color-tertiary;
   font-size: 14px;
   text-align: center;
-}
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
-.signup-link a {
-  color: #1DBEB4;
-  text-decoration: none;
-}
+  // Add media query to make the link responsive
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 
-.signup-link a:hover {
-  text-decoration: underline;
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

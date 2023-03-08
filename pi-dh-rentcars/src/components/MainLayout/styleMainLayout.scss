@@ -1,41 +1,44 @@
 // GLOBAL SCSS //
 
 // COLORS CONFIG
-// first #1DBEB4
-// second #383B58
-// third #545776
-// fourth #F3F1ED
-
-$color-primary: #1DBEB4;
-$color-secondary: #383B58;
-$color-tertiary: #545776;
-$color-quaternary: #F3F1ED;
-$color-quiternary: #FFFFFF;
+$color-first: #1DBEB4;
+$color-second: #383B58;
+$color-third: #545776;
+$color-fourth: #F3F1ED;
+$color-fiveth: #FFFFFF;
 
 * {
   font-family: "Roboto", sans-serif;
-  // background-color: #C4C4C4;
+
+  main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
 
   h1 {
-    color: $color-quaternary;
+    color: $color-fourth;
     font-size: 24px;
     font-weight: bold;
   }
 
   h2 {
-    color: $color-secondary;
+    color: $color-second;
     font-size: 20px;
     font-weight: bold;
   }
 
   h3 {
-    color: $color-tertiary;
+    color: $color-third;
     font-size: 16px;
     font-weight: bold;
   }
 
   h4 {
-    color: $color-tertiary;
+    color: $color-third;
     font-size: 14px;
     font-weight: bold;
   }
@@ -51,43 +54,3 @@ $color-quiternary: #FFFFFF;
   }
 }
 
-main {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  header {
-    background-color: #FFFFFF;
-    width: 100%;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    z-index: 1;
-  }
-
-  .content {
-    flex: 1;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  footer {
-    width: 100%;
-    background-color: $color-primary;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-  }
-}
-
-a  {
-  text-decoration: none;
-}
