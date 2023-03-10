@@ -1,0 +1,50 @@
+.headerStyle {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 80px;
+  left: 0;
+  top: 0;
+  padding: 0 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  border-bottom: #000;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.headerStyle .header_left a {
+  text-decoration: none;
+}
+.headerStyle .header_left .slogan {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: #545776;
+  margin-left: 12px;
+  position: relative;
+  bottom: -16px;
+}
+.headerStyle .header_right {
+  position: fixed;
+  right: 40px;
+}
+.headerStyle .header_right button {
+  width: 206px;
+  height: 40px;
+  background: #fff;
+  color: #1dbeb4;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+  border: 1px solid #1dbeb4;
+}
+.headerStyle .header_right button:hover {
+  background-color: #1dbeb4;
+  color: #fff;
+  border: 1px solid #1dbeb4;
+}
+.headerStyle .header_right .btn-login.padding {
+  margin-left: 10px;
+}/*# sourceMappingURL=styleHeader.css.map */

@@ -1,0 +1,121 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(196, 196, 196, 0.1);
+  width: 100%;
+}
+
+.login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 20px;
+  width: 468px;
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  .login-form {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.login-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  color: #1dbeb4;
+}
+@media (max-width: 768px) {
+  .login-form h2 {
+    font-size: 20px;
+  }
+}
+
+.login-form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .login-form label {
+    font-size: 14px;
+  }
+}
+
+.login-form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  width: 448px;
+}
+@media (max-width: 768px) {
+  .login-form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.login-form button {
+  background-color: #1dbeb4;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 206px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .login-form button {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+}
+.login-form button:hover {
+  background-color: #16928a;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 10px;
+}
+
+.register-link {
+  color: #545776;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .register-link {
+    font-size: 12px;
+  }
+}
+.register-link a {
+  color: #1dbeb4;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 0px 0px 5px;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=styleLogin.css.map */
