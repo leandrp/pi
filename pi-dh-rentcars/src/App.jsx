@@ -1,37 +1,36 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { MainLayout } from "./components/MainLayout/mainLayout";
-import { Home } from "./pages/Home/home"
-import { Login } from "./pages/Login/login";
-import { CreateAccount } from "./pages/CreateAccount/createAccount"
+import { MainLayout } from './components/MainLayout/mainLayout'
+import { Home } from './pages/Home/home'
+import { Login } from './pages/Login/login'
+import { CreateAccount } from './pages/CreateAccount/createAccount'
+import { UserProvider } from './context/userContext'
 
 function App() {
-
   const appRouter = createBrowserRouter([
     {
-      path: "",
+      path: '',
       element: <MainLayout />,
       children: [
         {
-          path: "/",
+          path: '/',
           element: <Home />
         },
         {
-          path: "login",
+          path: 'login',
           element: <Login />
         },
         {
-          path: "create-account",
+          path: 'create-account',
           element: <CreateAccount />
         }
-      ]  
-    },
-  ]);
+      ]
+    }
+  ])
   return (
-    <RouterProvider router={appRouter}/>
+    <UserProvider>
+      <RouterProvider router={appRouter} />
+    </UserProvider>
   )
 }
 

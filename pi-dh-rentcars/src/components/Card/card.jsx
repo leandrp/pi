@@ -34,7 +34,7 @@ const carsList = [
     alt: 'Imagem Frontal Fiat Cronos na cor Prata'
   }
 ]
-
+//mudar nome para productCard
 export function Card() {
   return (
     <>

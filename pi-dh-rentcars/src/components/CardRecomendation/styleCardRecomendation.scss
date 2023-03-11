@@ -1,5 +1,5 @@
 .title-card-recomendation {
-  margin: 0px;
+  margin: 0 auto;
   padding: 24px 40px 10px 40px;
   color: #383b58;
   font-style: normal;
@@ -7,13 +7,17 @@
   font-size: 24px;
   line-height: 28px;
   background-color: rgba(56, 59, 88, 0.1);
+  width: 100%;
+  max-width: 1366px;
 }
 .card-recomendation-group {
   display: flex;
   padding-bottom: 60px;
-  margin: 0px;
+  margin: 0 auto;
   background-color: rgba(56, 59, 88, 0.1);
   padding: 0px 40px 74px 40px;
+  width: 100%;
+  max-width: 1366px;
 
   // desktop 1366x768px
   .cars-list-recomendation {
@@ -88,7 +92,6 @@
           color: #f3f1ed;
           background-color: #383b58;
           border-radius: 10px;
-          z-index: 100;
         }
   
         .card-recomendation-note-text-wrapper {
@@ -102,7 +105,6 @@
           line-height: 16px;
           text-align: left;
           color: #383b58;
-          z-index: 10;
         }
         .text-rating {
           font-style: normal;

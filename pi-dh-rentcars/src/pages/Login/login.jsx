@@ -1,54 +1,95 @@
 import { useState } from 'react'
 import './styleLogin.scss'
 import { Link } from 'react-router-dom'
+import Avatar from 'react-avatar'
+import { useUser } from '../../context/userContext'
 
 export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [userName, setUserName] = useState('')
   const routes = {
     createAccount: '/create-account'
   }
+  const testUser = {
+    hello: 'Olá,',
+    email: 'test@test.com',
+    password: 'test123',
+    name: 'Test User'
+  }
+
+  const { setUserData, userData } = useUser()
 
   function handleLogin(event) {
     event.preventDefault()
-    console.log(`Email: ${email}, Password: ${password}`)
+    if (email === testUser.email && password === testUser.password) {
+      console.log('Login successful!')
+      setIsLoggedIn(true)
+      setUserName(testUser.name)
+      setUserData({ ...testUser, auth: true })
+    } else {
+      setError('Por favor, tente novamente, suas credenciais são inválidas.')
+    }
+  }
+
+  function getInitials(name) {
+    const parts = name.split(' ')
+    return parts[0][0] + (parts[1] ? parts[1][0] : '')
   }
 
   return (
     <div className="login-container">
-      <div className="login-form">
-        <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={event => setEmail(event.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Senha</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={event => setPassword(event.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">Entrar</button>
-        </form>
-        <p className="register-link">
-          Ainda não tem conta?
-          <a href="/create-account">
-            <Link to={routes.createAccount}> Registre-se</Link>
-          </a>
-          .
-        </p>
-      </div>
+      {isLoggedIn ? (
+        <div className="header">
+          <p>Olá, {userName}</p>
+          <Avatar
+            name={userName}
+            round={true}
+            size={40}
+            color="#F2B33D"
+            fgColor="#ffffff"
+            className="avatar"
+          />
+          <Link to="/">Home</Link>
+          <Link to="/logout">Sair</Link>
+        </div>
+      ) : (
+        <div className="login-form">
+          <h2>Login</h2>
+          {error && <p className="error">{error}</p>}
+          <form onSubmit={handleLogin}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={event => setEmail(event.target.value)}
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Senha</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={event => setPassword(event.target.value)}
+                required
+                pattern=".{6,}"
+              />
+            </div>
+            <button type="submit">Entrar</button>
+          </form>
+          <p className="register-link">
+            Ainda não tem conta?
+            <Link to={routes.createAccount}> Registre-se</Link>.
+          </p>
+        </div>
+      )}
     </div>
   )
 }

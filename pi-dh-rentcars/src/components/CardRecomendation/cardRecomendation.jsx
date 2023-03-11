@@ -1,6 +1,10 @@
 import './styleCardRecomendation.scss'
 import peugeotFront from '../../assets/images/e-peugeot-front.jpeg'
 import citroenFront from '../../assets/images/f-citroen-front.jpeg'
+import jeepFront from '../../assets/images/g-jeep-front.jpeg'
+import corollaFront from '../../assets/images/h-corolla-front.jpeg'
+import mitsubishiFront from '../../assets/images/i-mitsubishi-front.jpeg'
+import mercedesFront from '../../assets/images/j-mercedes-front.jpeg'
 import { useState } from 'react'
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 
@@ -26,6 +30,50 @@ const carsListRecomendation = [
     note: 7,
     notetext: 'Bom',
     text: 'Conheça O Novo Citroën C4 Cactus com Design Provocante e Melhor Performance da Categoria...'
+  },
+  {
+    id: 7,
+    name: 'Jeep Renegade',
+    description: 'Grupo G - Suv Automático',
+    image: jeepFront,
+    alt: 'Imagem Frontal Jeep Renegade na cor Bege',
+    rating: 3,
+    note: 5,
+    notetext: 'Regular',
+    text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
+  },
+  {
+    id: 8,
+    name: 'Toyota Corolla',
+    description: 'Grupo H - Executivo',
+    image: corollaFront,
+    alt: 'Imagem Frontal Toyota Corolla na cor Cinza',
+    rating: 4,
+    note: 8,
+    notetext: 'Muito bom',
+    text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
+  },
+  {
+    id: 9,
+    name: 'Mitsubishi Pajero',
+    description: 'Grupo I - Suv Elite',
+    image: mitsubishiFront,
+    alt: 'Imagem Frontal Mitsubishi Pajero na cor Prata',
+    rating: 5,
+    note: 9,
+    notetext: 'Ótimo',
+    text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
+  },
+  {
+    id: 10,
+    name: 'Mercedes Benz GLA 250',
+    description: 'Grupo J - Executivo Blindado',
+    image: mercedesFront,
+    alt: 'Imagem Frontal Mercedes Benz GLA 250 na cor Azul Marinho',
+    rating: 4,
+    note: 6,
+    notetext: 'Bom',
+    text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
   }
 ]
 
@@ -46,7 +94,7 @@ export function CardRecomendation() {
               <div className="card-recomendation-image">
                 <div className="card-recomendation-image-wrapper">
                   <img src={car.image} alt={car.alt} />
-                  <p onClick= {handleToggleFavorite }>
+                  <p onClick={handleToggleFavorite}>
                     {isFavorite ? (
                       <AiFillHeart className="favorite" />
                     ) : (
@@ -90,53 +138,3 @@ export function CardRecomendation() {
     </>
   )
 }
-
-// import jeepFront from '../../assets/images/g-jeep-front.jpeg'
-// import corollaFront from '../../assets/images/h-corolla-front.jpeg'
-// import mitsubishiFront from '../../assets/images/i-mitsubishi-front.jpeg'
-// import mercedesFront from '../../assets/images/j-mercedes-front.jpeg'
-
-// {
-//   id: 7,
-//   name: 'Jeep Renegade',
-//   description: 'Grupo G - Suv Automático',
-//   image: jeepFront,
-//   alt: 'Imagem Frontal Jeep Renegade na cor Bege',
-//   rating: 3,
-//   note: 5,
-//   notetext: 'Regular',
-//   text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
-// },
-// {
-//   id: 8,
-//   name: 'Toyota Corolla',
-//   description: 'Grupo H - Executivo',
-//   image: corollaFront,
-//   alt: 'Imagem Frontal Toyota Corolla na cor Cinza',
-//   rating: 4,
-//   note: 8,
-//   notetext: 'Muito bom',
-//   text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
-// },
-// {
-//   id: 9,
-//   name: 'Mitsubishi Pajero',
-//   description: 'Grupo I - Suv Elite',
-//   image: mitsubishiFront,
-//   alt: 'Imagem Frontal Mitsubishi Pajero na cor Prata',
-//   rating: 5,
-//   note: 9,
-//   notetext: 'Ótimo',
-//   text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
-// },
-// {
-//   id: 10,
-//   name: 'Mercedes Benz GLA 250',
-//   description: 'Grupo J - Executivo Blindado',
-//   image: mercedesFront,
-//   alt: 'Imagem Frontal Mercedes Benz GLA 250 na cor Azul Marinho',
-//   rating: 4,
-//   note: 6,
-//   notetext: 'Bom',
-//   text: 'No coração de San Telmo, desfrute de uma pousada inspirada nas paixões de Buenos Aires. mais...'
-// }

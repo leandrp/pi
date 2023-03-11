@@ -23,7 +23,6 @@ $color-quintenary: #ffffff;
   width: 468px;
   background-color: transparent;
 
-  // adjust styles for small screens
   @media (max-width: 768px) {
     width: 100%;
     font-size: 14px;
@@ -37,7 +36,6 @@ $color-quintenary: #ffffff;
   margin: 20px auto;
   color: $color-primary;
 
-  // adjust font size for small screens
   @media (max-width: 768px) {
     font-size: 20px;
   }
@@ -48,7 +46,6 @@ $color-quintenary: #ffffff;
   font-weight: bold;
   margin-bottom: 5px;
 
-  // adjust font size for small screens
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -65,7 +62,6 @@ $color-quintenary: #ffffff;
   background-color: $color-quintenary;
   width: 448px;
 
-  // adjust font size and padding for small screens
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px;
@@ -86,7 +82,6 @@ $color-quintenary: #ffffff;
   display: block;
   margin: 0 auto;
 
-  // adjust font size and padding for small screens
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 16px;
@@ -97,8 +92,14 @@ $color-quintenary: #ffffff;
     background-color: darken(
       $color-primary,
       10%
-    ); // Use Sass function to darken color on hover
+    ); 
   }
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 10px;
 }
 
 .register-link {
@@ -109,7 +110,6 @@ $color-quintenary: #ffffff;
   justify-content: center;
   width: 100%;
 
-  // Add media query to make the link responsive
   @media (max-width: 768px) {
     font-size: 12px;
   }
