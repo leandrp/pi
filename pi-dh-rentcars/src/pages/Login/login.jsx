@@ -10,9 +10,7 @@ export function Login() {
   const [error, setError] = useState('')
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userName, setUserName] = useState('')
-  const routes = {
-    createAccount: '/create-account'
-  }
+
   const testUser = {
     hello: 'Olá,',
     email: 'test@test.com',
@@ -86,7 +84,7 @@ export function Login() {
           </form>
           <p className="register-link">
             Ainda não tem conta?
-            <Link to={routes.createAccount}> Registre-se</Link>.
+            <Link to="/create-account"> Registre-se</Link>.
           </p>
         </div>
       )}

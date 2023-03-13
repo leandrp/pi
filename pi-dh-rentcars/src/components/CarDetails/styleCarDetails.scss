@@ -1,0 +1,77 @@
+$carId: 123;
+
+.car-det-block {
+  background-color: rgba(56, 59, 88, 0.1);
+  width: 100%;
+  position: absolute;
+  align-items: center;
+
+  .car-det-header {
+    position: relative;
+    top: 30px;
+    right: 0;
+    margin-top: 50px;
+    height: 60px;
+    padding: 8px 40px;
+    background-color: #545776;
+
+    .car-det-header-text-rating {
+      color: #f3f1ed;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      align-items: center;
+    }
+
+    .car-det-header-title {
+      color: #fff;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      align-items: center;
+    }
+
+  }
+  
+  .car-det-evaluation{
+    position: relative;
+    top: 30px;
+    right: 0;
+    // margin-top: 50px;
+    height: 60px;
+    padding: 8px 40px;
+
+    background-color: rgba(56, 59, 88, 0.1);
+
+    .car-det-description{
+      text-align: left;
+    }
+
+    .car-det-rating{
+      text-align: right;
+    }
+  }
+
+  .car-det-img-block{
+
+    margin-top: 100PX;
+    .car-det-img{
+
+      .car-det-img-wrapper{
+        width: 638px;
+        height: 386px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid #f3f1ed;
+        background-color: #fff;
+        // background-size: cover;
+        // background-image: url(../../assets/images/a-uno-back.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+      }
+    }
+  
+  }
+
+}

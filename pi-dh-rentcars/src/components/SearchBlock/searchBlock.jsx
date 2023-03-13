@@ -19,7 +19,7 @@ function SearchBlock() {
               id="city"
               name="city"
               className="search-city"
-              placeholder="Selecione a cidade"
+              placeholder="Selecione a cidade de retirada"
             />
           </div>
         </div>
