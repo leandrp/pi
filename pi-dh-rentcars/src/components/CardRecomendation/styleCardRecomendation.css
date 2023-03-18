@@ -1,28 +1,33 @@
-.title-card-recomendation {
-  margin: 0px;
+.cars-recomendation-block {
+  background-color: rgba(56, 59, 88, 0.1);
+  width: 100%;
+}
+.cars-recomendation-block .title-card-recomendation {
+  margin: 0 auto;
   padding: 24px 40px 10px 40px;
   color: #383b58;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  background-color: rgba(56, 59, 88, 0.1);
+  width: 100%;
+  max-width: 1366px;
 }
-
-.card-recomendation-group {
+.cars-recomendation-block .card-recomendation-group {
   display: flex;
   padding-bottom: 60px;
-  margin: 0px;
-  background-color: rgba(56, 59, 88, 0.1);
+  margin: 0 auto;
   padding: 0px 40px 74px 40px;
+  width: 100%;
+  max-width: 1366px;
 }
-.card-recomendation-group .cars-list-recomendation {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   width: 100%;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation {
   width: 634px;
   height: 283px;
   display: flex;
@@ -33,16 +38,16 @@
   overflow: hidden;
   background-color: #fff;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-image {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-image {
   width: 311px;
   height: 100%;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-image .card-recomendation-image-wrapper {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-image .card-recomendation-image-wrapper {
   position: relative;
   width: 311;
   height: 100%;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-image .card-recomendation-image-wrapper p {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-image .card-recomendation-image-wrapper p {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -50,28 +55,28 @@
   color: #1dbeb4;
   cursor: pointer;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-image img {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-image img {
   width: 311px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content {
   position: relative;
   padding: 14px;
   margin: 0;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content h2 {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content p {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-note-wrapper {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-note-wrapper {
   position: absolute;
   top: 5px;
   right: 14px;
@@ -85,7 +90,7 @@
   background-color: #383b58;
   border-radius: 10px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-note-text-wrapper {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-note-text-wrapper {
   position: absolute;
   top: 30px;
   right: 14px;
@@ -97,22 +102,22 @@
   text-align: left;
   color: #383b58;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content .text-rating {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content .text-rating {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   color: rgba(56, 59, 88, 0.5);
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-rating {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-rating {
   margin-bottom: 10px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-rating .card-recomendation-star {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content .card-recomendation-rating .card-recomendation-star {
   font-size: 20px;
   color: #1dbeb4;
   margin-right: 5px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content button {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content button {
   width: 296px;
   height: 40px;
   background: #1dbeb4;
@@ -124,12 +129,12 @@
   cursor: pointer;
   border: 1px solid #1dbeb4;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-content button:hover {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-content button:hover {
   background-color: #fff;
   color: #1dbeb4;
   border: 1px solid #1dbeb4;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-title {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-title {
   margin: 0px;
   margin-top: -5px;
   font-size: 18px;
@@ -139,7 +144,7 @@
   line-height: 23px;
   color: #383b58;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-description {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-description {
   margin: 0px;
   margin-top: -5px;
   color: #383b58;
@@ -149,7 +154,7 @@
   font-size: 14px;
   line-height: 16px;
 }
-.card-recomendation-group .cars-list-recomendation .card-recomendation-text {
+.cars-recomendation-block .card-recomendation-group .cars-list-recomendation .card-recomendation-text {
   width: 296px;
   margin: 0px;
   color: #383b58;

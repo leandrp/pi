@@ -1,18 +1,23 @@
 .title-card {
-  margin: 24px auto 9px 40px;
+  margin: 24px auto 9px;
+  padding-left: 40px;
   color: #383b58;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  width: 100%;
+  max-width: 1366px;
 }
 
 .card-group {
-  margin: 0px;
+  margin: 0 auto;
   padding: 1px 0px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 1366px;
 }
 .card-group .cars-list {
   display: flex;
