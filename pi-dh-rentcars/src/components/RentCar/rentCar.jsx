@@ -4,7 +4,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import carsList from '../CarList/carsList'
 import { FaMapMarkerAlt, FaHeart, FaShareAlt } from 'react-icons/fa';
 
-export function CarDetails({ carId }) {
+export function RentCar({ carId }) {
   const [isFavorite, setIsFavorite] = useState(false)
 
   const handleToggleFavorite = () => {

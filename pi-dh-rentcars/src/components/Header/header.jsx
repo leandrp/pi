@@ -1,7 +1,7 @@
 import React from 'react'
 import Avatar from 'react-avatar'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo/logo.png'
+import logo from '../../assets/logo/logo-grande.png'
 import { useUser } from '../../context/userContext'
 import './styleHeader.scss'
 
@@ -15,8 +15,8 @@ function Header() {
       <div className="header_left">
 
         <Link to="/">
-          <img src={logo} alt="Logo" />
-          <span className="slogan">Aluguel de Carros</span>
+          <img className='logo' src={logo} alt="Logo" />
+          <span className="slogan">RentCars</span>
         </Link>
       </div>
       <div className="header_right">

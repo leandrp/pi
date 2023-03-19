@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="left">
-        <p>© 2023 DH RentCars</p>
+        <p>© 2023 RentCars</p>
       </div>
       <div className="right">
         <FontAwesomeIcon icon={faFacebook} />

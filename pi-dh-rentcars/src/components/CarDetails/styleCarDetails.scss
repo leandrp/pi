@@ -1,16 +1,15 @@
 $carId: 123;
 
 .car-det-block {
-  background-color: rgba(56, 59, 88, 0.1);
+  // background-color: rgba(56, 59, 88, 0.1);
   width: 100%;
   position: absolute;
   align-items: center;
 
   .car-det-header {
     position: relative;
-    top: 30px;
+    top: 80px;
     right: 0;
-    margin-top: 50px;
     height: 60px;
     padding: 8px 40px;
     background-color: #545776;
@@ -32,46 +31,170 @@ $carId: 123;
       line-height: 28px;
       align-items: center;
     }
-
   }
-  
-  .car-det-evaluation{
+
+  .car-det-evaluation {
     position: relative;
-    top: 30px;
+    top: 80px;
     right: 0;
-    // margin-top: 50px;
     height: 60px;
     padding: 8px 40px;
-
     background-color: rgba(56, 59, 88, 0.1);
 
-    .car-det-description{
+    .car-det-description {
+      margin-top: 15px;
       text-align: left;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #383b58;
     }
 
-    .car-det-rating{
+    .car-det-rating {
       text-align: right;
+
+      .car-det-star {
+        position: absolute;
+        top: 28px;
+        right: 75px;
+        font-size: 20px;
+        color: #1dbeb4;
+        margin-right: 5px;
+        gap: 10px;
+      }
+      .car-det-note {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        width: 34px;
+        height: 34px;
+        padding: 3px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color: #f3f1ed;
+        background-color: #383b58;
+        border-radius: 10px;
+      }
+      .car-det-note-text {
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        margin-top: 4px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: left;
+        color: #383b58;
+      }
     }
   }
 
-  .car-det-img-block{
-
-    margin-top: 100PX;
-    .car-det-img{
-
-      .car-det-img-wrapper{
+  .car-det-img-block {
+    .car-det-img {
+      .car-det-img-wrapper-1 {
+        position: relative;
+        top: 60px;
+        right: 0;
+        margin: 60px 40px 44px;
+        padding: 40px;
         width: 638px;
         height: 386px;
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        border: 1px solid #f3f1ed;
-        background-color: #fff;
-        // background-size: cover;
-        // background-image: url(../../assets/images/a-uno-back.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+        background-size: cover;
+        background-image: url(../../assets/images/j-mercedes-front.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+      }
+      .car-det-img-wrapper-2 {
+        position: absolute;
+        top: 200px;
+        right: 323px;
+        margin: 60px 40px 44px;
+        padding: 40px;
+        width: 314px;
+        height: 189px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        background-image: url(../../assets/images/j-mercedes-back.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+      }
+      .car-det-img-wrapper-3 {
+        position: absolute;
+        top: 200px;
+        right: 0px;
+        margin: 60px 40px 44px;
+        padding: 40px;
+        width: 314px;
+        height: 189px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        background-image: url(../../assets/images/j-mercedes-side.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+      }
+      .car-det-img-wrapper-4 {
+        position: absolute;
+        top: 398px;
+        right: 323px;
+        margin: 60px 40px 44px;
+        padding: 40px;
+        width: 314px;
+        height: 189px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        background-image: url(../../assets/images/j-mercedes-front.jpeg); // CORRIGIR E DEIXAR DINÁMICO
+      }
+      .car-det-img-wrapper-5 {
+        position: absolute;
+        top: 398px;
+        right: 0;
+        margin: 60px 40px 44px;
+        padding: 40px;
+        width: 314px;
+        height: 189px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        background-image: url(../../assets/images/j-mercedes-back.jpeg); // CORRIGIR E DEIXAR DINÁMICO
       }
     }
-  
   }
 
+  .car-det-text {
+    .car-det-text-content {
+      .car-det-text-title {
+        padding: 44px 40px 40px 40px;
+        color: #383b58;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .car-det-text-text {
+        color: #4f4f50;
+        margin-bottom: 58px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.heart {
+  position: absolute;
+  top: 225px;
+  left: 40px;
+  color: #545776;
+  font-size: 20px;
 }

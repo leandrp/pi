@@ -1,0 +1,71 @@
+.title-card {
+  margin: 24px auto 9px;
+  padding-left: 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  width: 100%;
+  max-width: 1366px;
+}
+
+.card-group {
+  margin: 0 auto;
+  padding: 1px 0px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1366px;
+
+
+  .cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+
+    .cards {
+      width: 310px;
+      height: 246.67px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      border: 1px solid #f3f1ed;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      background-color: #fff;
+
+      .cards-img {
+        width: 310px;
+        height: 100%;
+        border-radius: 8px 8px 0px 0px;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+      }
+
+      .cards-title {
+        margin: 16px 11px 0px 11px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        color: #383b58;
+      }
+
+      .cards-text {
+        margin: 5px 11px 12px 11px;
+        color: #383b58;
+        opacity: 0.6;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
