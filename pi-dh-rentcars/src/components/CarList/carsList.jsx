@@ -19,7 +19,7 @@ const carsList = [
     rating: 3,
     note: 6,
     notetext: 'Regular',
-    text: 'Utilizando o motor 1.0 tricilíndrico presente nas versões Drive e Way, o carro faz de 0 a 10...'
+    text: 'O Fiat Uno 1.0 é um carro compacto que oferece economia e praticidade. Com um motor de 999 c...'
   },
   {
     id: 5,

@@ -6,6 +6,8 @@ import './styles.css'
 // import LocationIcon from '@rsuite/icons/Location';
 
 function SearchBlock() {
+  const { beforeToday } = DateRangePicker
+
   return (
     <div className="search-block">
       <h1 className="main-title">
@@ -23,7 +25,26 @@ function SearchBlock() {
             />
           </div>
         </div>
-        <DateRangePicker placeholder="Data Retidada - Devolução" />
+        <DateRangePicker
+          disabledDate={beforeToday()}
+          format="dd-MM-yyyy HH:mm"
+          locale={{
+            sunday: 'Dom',
+            monday: 'Seg',
+            tuesday: 'Ter',
+            wednesday: 'Qua',
+            thursday: 'Qui',
+            friday: 'Sex',
+            saturday: 'Sab',
+            ok: 'Aplicar',
+            today: 'Hoje',
+            yesterday: 'Ontem',
+            hours: 'Horas',
+            minutes: 'Minutos'
+          }}
+          placeholder="Data e Hora: Retidada | Devolução"
+        />
+
         <div>
           <button type="submit" className="search-btn">
             Pesquisar

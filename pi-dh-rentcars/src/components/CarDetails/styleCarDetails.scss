@@ -85,9 +85,9 @@ $carId: 123;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
-        line-height: 16px;
         text-align: left;
         color: #383b58;
+        line-height: 1.5;
       }
     }
   }
@@ -168,6 +168,7 @@ $carId: 123;
   }
 
   .car-det-text {
+    margin-bottom: 80px;
     .car-det-text-content {
       .car-det-text-title {
         padding: 44px 40px 40px 40px;
@@ -186,6 +187,148 @@ $carId: 123;
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
+
+        .car-det-text-text-paragraph {
+          margin-bottom: 1.5em;
+        }
+      }
+      .car-det-text-benefits {
+        padding: 0px 40px 20px 40px;
+        color: #383b58;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .icons-colum {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      
+        li {
+          width: 33.33%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+      
+          svg {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .car-det-text-benefits-icons {
+        display: flex;
+        padding: 10px 40px;
+        color: #1dbeb4;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-decoration: none;
+        .icon-text {
+          color: #383b58;
+          padding-left: 15px;
+        }
+      }
+    }
+    .calendar {
+      height: 550px;
+      background: rgba(56, 59, 88, 0.1);
+      .calendar-text {
+        padding: 44px 40px 40px 40px;
+        color: #383b58;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .reserva-block {
+        background-color: #fff;
+        height: 149px;
+        width: 410px;
+        border-radius: 8px;
+        position: relative;
+        left: 60%;
+        .text-reserva {
+          padding: 15px 25px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: #4f4f50;
+        }
+        .btn-reserva {
+          width: 360px;
+          height: 40px;
+          margin: 20px;
+          border-radius: 5px;
+          color: #fff;
+          background-color: #1dbeb4;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+        }
+      }
+      .custom-date-range-picker {
+        position: relative;
+        width: 492px;
+        margin-left: 100px;
+      }
+    }
+    .map {
+      .car-det-text-map {
+        padding: 20px 40px 10px 40px;
+        color: #383b58;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .city-map-title {
+        padding: 0px 40px 10px 40px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #4f4f50;
+      }
+    }
+    .rules {
+      .rules-title {
+        padding: 20px 40px 10px 40px;
+        color: #383b58;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      .rules-text-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        .rules-text-flex-title {
+          padding: 10px 40px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          color: #545776;
+        }
+        .rules-text-flex-par {
+          padding: 10px 40px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          color: #4f4f50;
+        }
       }
     }
   }
@@ -197,4 +340,18 @@ $carId: 123;
   left: 40px;
   color: #545776;
   font-size: 20px;
+}
+.horizontal-line {
+  border-top: 1px solid #1dbeb4;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.rs-btn.rs-btn-primary.rs-btn-sm {
+  background-color: #1dbeb4;
+  color: #fff;
+}
+
+.rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
+  display: none;
 }
