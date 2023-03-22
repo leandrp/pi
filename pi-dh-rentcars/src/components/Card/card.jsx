@@ -1,5 +1,5 @@
 import './styleCard.scss'
-import carsList from '../CarList/carsList';
+import carsList from '../CarList/carsList'
 
 //mudar nome para productCard
 export function Card() {

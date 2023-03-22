@@ -1,14 +1,12 @@
 .car-det-block {
-  background-color: rgba(56, 59, 88, 0.1);
   width: 100%;
   position: absolute;
   align-items: center;
 }
 .car-det-block .car-det-header {
   position: relative;
-  top: 30px;
+  top: 80px;
   right: 0;
-  margin-top: 50px;
   height: 60px;
   padding: 8px 40px;
   background-color: #545776;
@@ -31,27 +29,291 @@
 }
 .car-det-block .car-det-evaluation {
   position: relative;
-  top: 30px;
+  top: 80px;
   right: 0;
   height: 60px;
   padding: 8px 40px;
   background-color: rgba(56, 59, 88, 0.1);
 }
 .car-det-block .car-det-evaluation .car-det-description {
+  margin-top: 15px;
   text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #383b58;
 }
 .car-det-block .car-det-evaluation .car-det-rating {
   text-align: right;
 }
-.car-det-block .car-det-img-block {
-  margin-top: 100PX;
+.car-det-block .car-det-evaluation .car-det-rating .car-det-star {
+  position: absolute;
+  top: 28px;
+  right: 75px;
+  font-size: 20px;
+  color: #1dbeb4;
+  margin-right: 5px;
+  gap: 10px;
 }
-.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper {
-  width: 638px;
-  height: 386px;
-  display: flex;
-  flex-direction: column;
+.car-det-block .car-det-evaluation .car-det-rating .car-det-note {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  width: 34px;
+  height: 34px;
+  padding: 3px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #f3f1ed;
+  background-color: #383b58;
   border-radius: 10px;
-  border: 1px solid #f3f1ed;
+}
+.car-det-block .car-det-evaluation .car-det-rating .car-det-note-text {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  color: #383b58;
+  line-height: 1.5;
+}
+.car-det-block .car-det-img-block .car-det-img {
+  overflow: hidden;
+  align-items: bottom;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-1 {
+  margin: 120px 0px 15px 40px;
+  width: 638px;
+  height: 360px;
+  display: grid;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-between;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-2 {
+  margin: 120px 40px 15px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  gap: 10px;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-2 .car-det-img-item button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #1dbeb4;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-2 .car-det-img-item button:hover {
+  background-color: #2fdfd4;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-2 .car-det-img-item {
+  width: 314px;
+  height: 175px;
+  display: flex;
+  position: relative;
+}
+.car-det-block .car-det-img-block .car-det-img .car-det-img-wrapper-2 .car-det-img-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.car-det-block .car-det-text {
+  margin-bottom: 80px;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-title {
+  padding: 20px 40px 40px 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-text {
+  color: #4f4f50;
+  margin-bottom: 58px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-text .car-det-text-text-paragraph {
+  margin-bottom: 1.5em;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-benefits {
+  padding: 0px 40px 20px 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.car-det-block .car-det-text .car-det-text-content .icons-colum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.car-det-block .car-det-text .car-det-text-content .icons-colum li {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.car-det-block .car-det-text .car-det-text-content .icons-colum li svg {
+  margin-bottom: 10px;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-benefits-icons {
+  display: flex;
+  padding: 10px 40px;
+  color: #1dbeb4;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+}
+.car-det-block .car-det-text .car-det-text-content .car-det-text-benefits-icons .icon-text {
+  color: #383b58;
+}
+.car-det-block .car-det-text .calendar {
+  height: 550px;
+  background: rgba(56, 59, 88, 0.1);
+}
+.car-det-block .car-det-text .calendar .calendar-text {
+  padding: 44px 40px 40px 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.car-det-block .car-det-text .calendar .reserva-block {
   background-color: #fff;
+  height: 149px;
+  width: 410px;
+  border-radius: 8px;
+  position: relative;
+  left: 60%;
+}
+.car-det-block .car-det-text .calendar .reserva-block .text-reserva {
+  padding: 15px 25px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f4f50;
+}
+.car-det-block .car-det-text .calendar .reserva-block .btn-reserva {
+  width: 360px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1dbeb4;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+.car-det-block .car-det-text .calendar .custom-date-range-picker {
+  position: relative;
+  width: 492px;
+  margin-left: 100px;
+}
+.car-det-block .car-det-text .map .car-det-text-map {
+  padding: 20px 40px 10px 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.car-det-block .car-det-text .map .city-map-title {
+  padding: 0px 40px 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f4f50;
+}
+.car-det-block .car-det-text .rules .rules-title {
+  padding: 20px 40px 10px 40px;
+  color: #383b58;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.car-det-block .car-det-text .rules .rules-text-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.car-det-block .car-det-text .rules .rules-text-columns .rules-text-flex-title {
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #545776;
+}
+.car-det-block .car-det-text .rules .rules-text-columns .rules-text-flex-par {
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #4f4f50;
+}
+
+.heart {
+  position: absolute;
+  top: 225px;
+  left: 40px;
+  color: #545776;
+  font-size: 20px;
+}
+
+.horizontal-line {
+  border-top: 1px solid #1dbeb4;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.rs-btn.rs-btn-primary.rs-btn-sm {
+  background-color: #1dbeb4;
+  color: #fff;
+}
+
+.rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
+  display: none;
 }/*# sourceMappingURL=styleCarDetails.css.map */

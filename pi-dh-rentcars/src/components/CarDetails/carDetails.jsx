@@ -12,9 +12,26 @@ import {
   FaCarSide,
   FaSuitcase
 } from 'react-icons/fa'
+import { BiShieldQuarter } from 'react-icons/bi'
 import { DateRangePicker } from 'rsuite'
+import ImageGallery from 'react-image-gallery'
+import 'react-image-gallery/styles/css/image-gallery.css'
 
 export function CarDetails({ carId }) {
+  const [selectedImages, setSelectedImages] = useState([])
+
+  const handleSelectImages = () => {
+    setSelectedImages([
+      { original: car.image, thumbnail: car.image },
+      { original: car.image2, thumbnail: car.image2 },
+      { original: car.image3, thumbnail: car.image3 },
+      { original: car.image4, thumbnail: car.image4 },
+      { original: car.image5, thumbnail: car.image5 }
+    ])
+  }
+
+  // const [showGallery, setShowGallery] = useState(false)
+
   const [isFavorite, setIsFavorite] = useState(false)
 
   const handleToggleFavorite = () => {
@@ -61,13 +78,46 @@ export function CarDetails({ carId }) {
         </p>
         <div className="car-det-img-block" key={car.id}>
           <div className="car-det-img">
-            <div className="car-det-img-wrapper-1" />
-            <div className="car-det-img-wrapper-2" />
-            <div className="car-det-img-wrapper-3" />
-            <div className="car-det-img-wrapper-4" />
-            <div className="car-det-img-wrapper-5" />
+            <div className="car-det-img-wrapper-1">
+              <img src={car.image} alt={car.alt} />
+            </div>
+            <div className="car-det-img-wrapper-2">
+              <div className="car-det-img-item">
+                <img src={car.image2} alt={car.alt} />
+              </div>
+              <div className="car-det-img-item">
+                <img src={car.image3} alt={car.alt} />
+              </div>
+              <div className="car-det-img-item">
+                <img src={car.image4} alt={car.alt} />
+              </div>
+              <div className="car-det-img-item">
+                <img src={car.image5} alt={car.alt} />
+                <button
+                  className="car-det-img-item-btn"
+                  onClick={handleSelectImages}
+                >
+                  Ver mais
+                </button>
+                {selectedImages.length > 0 && (
+                  <div
+                    className="gallery-modal"
+                    onClick={() => setSelectedImages([])}
+                  >
+                    <div
+                      className="gallery-content"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <ImageGallery items={selectedImages} />
+                    </div>
+                  </div>
+                )}
+
+              </div>
+            </div>
           </div>
         </div>
+
         <span className="heart">
           <FaShareAlt /> <FaHeart />{' '}
         </span>
@@ -105,26 +155,31 @@ export function CarDetails({ carId }) {
             </div>
             <h2 className="car-det-text-benefits">O que esse carro oferece?</h2>
             <div className="horizontal-line"></div>
-            <div className="icons-colum" >
-            <li className="car-det-text-benefits-icons">
-              <FaUser />
-              <p className="icon-text">5 passageiros</p>
-            </li>
-            <li className="car-det-text-benefits-icons">
-              <FaSnowflake />
-              <p className="icon-text">Ar Condicionado</p>
-            </li>
-            <li className="car-det-text-benefits-icons">
-              <FaCog /> <p className="icon-text">Câmbio Manual</p>
-            </li>
-            <li className="car-det-text-benefits-icons">
-              <FaCarSide />
-              <p className="icon-text">4 portas</p>
-            </li>
-            <li className="car-det-text-benefits-icons">
-              <FaSuitcase />
-              <p className="icon-text">1 porta malas</p>
-            </li></div>
+            <div className="icons-colum">
+              <li className="car-det-text-benefits-icons">
+                <FaUser />
+                <p className="icon-text">5 passageiros</p>
+              </li>
+              <li className="car-det-text-benefits-icons">
+                <FaSnowflake />
+                <p className="icon-text">Ar Condicionado</p>
+              </li>
+              <li className="car-det-text-benefits-icons">
+                <FaCog /> <p className="icon-text">Câmbio Manual</p>
+              </li>
+              <li className="car-det-text-benefits-icons">
+                <FaCarSide />
+                <p className="icon-text">4 portas</p>
+              </li>
+              <li className="car-det-text-benefits-icons">
+                <FaSuitcase />
+                <p className="icon-text">1 porta malas</p>
+              </li>
+              <li className="car-det-text-benefits-icons">
+                <BiShieldQuarter />
+                <p className="icon-text">Air Bag</p>
+              </li>
+            </div>
           </div>
           <div className="calendar">
             <h2 className="calendar-text">Datas disponíveis</h2>

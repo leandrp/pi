@@ -24,6 +24,9 @@
   position: relative;
   bottom: -16px;
 }
+.headerStyle .logo {
+  height: 58px;
+}
 .headerStyle .header_right {
   position: fixed;
   right: 40px;
