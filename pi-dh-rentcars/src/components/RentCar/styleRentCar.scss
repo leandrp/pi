@@ -3,7 +3,7 @@
   width: 100%;
   position: absolute;
   align-items: center;
-  z-index:-1;
+  // z-index:-1;
 
   .rent-car-det-header {
     position: relative;
@@ -30,7 +30,7 @@
       line-height: 28px;
       align-items: center;
     }
-    .btn-back{
+    .btn-back {
       position: absolute;
       right: 30px;
       top: 5px;
@@ -41,19 +41,42 @@
       z-index: 10;
     }
   }
-
-  
-  .rent-car-det-evaluation {
+  .rent-car-det-header-card {
     position: relative;
-    top: 80px;
+    top: 20px;
     right: 0;
     height: 60px;
     padding: 8px 40px;
-    background-color: rgba(56, 59, 88, 0.1);
-
+    .rent-car-det-header-text-rating {
+      color: #383b58;
+      opacity: 0.5;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      align-items: center;
+    }
+    .rent-car-det-header-title {
+      color: #383b58;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      align-items: center;
+    }
+  }
+  .rent-car-det-star {
+    position: relative;
+    top: 20px;
+    right: -35px;
+    font-size: 20px;
+    color: #1dbeb4;
+    margin-right: 5px;
+    gap: 10px;
+  }
+  .rent-car-det-evaluation {
     .rent-car-det-description {
-      margin-top: 15px;
-      text-align: left;
+      margin: 40px;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
@@ -61,18 +84,11 @@
       color: #383b58;
     }
 
+    
     .rent-car-det-rating {
       text-align: right;
 
-      .rent-car-det-star {
-        position: absolute;
-        top: 28px;
-        right: 75px;
-        font-size: 20px;
-        color: #1dbeb4;
-        margin-right: 5px;
-        gap: 10px;
-      }
+
       .rent-car-det-note {
         position: absolute;
         top: 15px;
@@ -101,41 +117,50 @@
       }
     }
   }
-
+  .rentcar-colum-2-content {
+    .rentcar-colum-2-content-card {
+      height: 817px;
+      width: 409px;
+      margin-top: 80px;
+      margin-right: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
   .rent-car-det-img-block {
-  
     .rent-car-det-img {
-      overflow: hidden;
-      align-items: bottom;
-      justify-content: space-between;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-  
+      // overflow: hidden;
+      // align-items: bottom;
+      // justify-content: space-between;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // gap: 20px;
+
       .rent-car-det-img-wrapper-1 {
-        margin: 120px 0px 15px 40px;
-        width: 638px;
-        height: 360px;
-        display: grid;
-        background-size: cover;
-        align-items: center;
-        justify-content: space-between;
-  
+        // margin: 120px 0px 15px 40px;
+        // width: 409px;
+        // height: 360px;
+        // display: grid;
+        // background-size: cover;
+        // align-items: center;
+        // justify-content: space-between;
+
         img {
+          margin-top: -20px;
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 10px;
+          // border-radius: 10px;
         }
       }
-  
+
       .rent-car-det-img-wrapper-2 {
         margin: 120px 40px 15px 0px;
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         grid-template-rows: repeat(2, 2fr);
         gap: 10px;
-  
+
         .rent-car-det-img-item-btn {
           position: absolute;
           bottom: 0;
@@ -155,88 +180,33 @@
           height: 175px;
           display: flex;
           position: relative;
-          
+
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
-
-            
-            
           }
-
-        
         }
       }
     }
   }
 
   .rent-car-det-text {
-    margin-bottom: 80px;
-    .rent-car-det-text-content {
-      .rent-car-det-text-title {
-        padding: 20px 40px 40px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .rent-car-det-text-text {
-        color: #4f4f50;
-        margin-bottom: 58px;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 20px;
 
-        .rent-car-det-text-text-paragraph {
-          margin-bottom: 1.5em;
-        }
-      }
-      .rent-car-det-text-benefits {
-        padding: 0px 40px 20px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .icons-colum {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      
-        li {
-          width: 33.33%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          margin-bottom: 20px;
-      
-          svg {
-            margin-bottom: 10px;
-          }
-        }
-      }
-      .rent-car-det-text-benefits-icons {
-        display: flex;
-        padding: 10px 40px;
-        color: #1dbeb4;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        text-decoration: none;
-        .icon-text {
-          color: #383b58;
-        }
-      }
+    .rent-car-det-text-title {
+      padding: 20px 40px 40px 40px;
+      color: #383b58;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
     }
+
     .calendar {
       height: 550px;
       background: rgba(56, 59, 88, 0.1);
@@ -283,60 +253,57 @@
         margin-left: 100px;
       }
     }
-    .rules {
-      background-color: #fff;
-      margin-bottom: -20px;
-      z-index: 1;
-      .rules-title {
-        padding: 40px 40px 10px 40px;
-        color: #383b58;
+  }
+  .rules {
+    background-color: #fff;
+    margin-bottom: 40px;
+    z-index: 1;
+    .rules-title {
+      padding: 40px 40px 10px 40px;
+      color: #383b58;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .rules-text-columns {
+      padding-bottom: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+
+      .rules-text-flex-title {
+        padding: 10px 40px;
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 23px;
+        color: #545776;
       }
-      .rules-text-columns {
-        padding-bottom: 30px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-
-        .rules-text-flex-title {
-          padding: 10px 40px;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 23px;
-          color: #545776;
-        }
-        .rules-text-flex-par {
-          padding: 10px 40px;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 16px;
-          display: flex;
-          align-items: center;
-          color: #4f4f50;
-        }
+      .rules-text-flex-par {
+        padding: 10px 40px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #4f4f50;
       }
     }
   }
 }
 
-
-
-.heart {
-  position: absolute;
-  top: 225px;
-  left: 40px;
-  color: #545776;
-  font-size: 20px;
-}
 .horizontal-line {
   border-top: 1px solid #1dbeb4;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+.horizontal-line-card {
+  border-top: 1px solid #BEBEBE;
+  max-width: 90%;
+  margin: 10px auto 30px auto;
 }
 
 .rs-btn.rs-btn-primary.rs-btn-sm {
@@ -346,32 +313,4 @@
 
 .rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
   display: none;
-}
-
-.gallery-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(56, 59, 88, 0.98);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  .gallery-content {
-    width: 638px;
-    height: 476px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: auto;
-    button{
-      color: #1dbeb4;
-    }
-  }
 }
