@@ -80,9 +80,9 @@ export function CreateAccount() {
         </form>
         <p className="login-link">
           Já tem uma conta?
-          <a>
+
             <Link to={routes.login}>Iniciar sessão</Link>
-          </a>
+
           .
         </p>
       </div>

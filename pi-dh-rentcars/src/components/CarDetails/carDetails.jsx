@@ -16,9 +16,11 @@ import { BiShieldQuarter } from 'react-icons/bi'
 import { DateRangePicker } from 'rsuite'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
+import { useNavigate } from 'react-router-dom'
+import { IoIosArrowBack } from 'react-icons/io';
 
 export function CarDetails({ carId }) {
-  const [selectedImages, setSelectedImages] = useState([])
+  const navigate = useNavigate()
 
   const handleSelectImages = () => {
     setSelectedImages([
@@ -28,9 +30,14 @@ export function CarDetails({ carId }) {
       { original: car.image4, thumbnail: car.image4 },
       { original: car.image5, thumbnail: car.image5 }
     ])
+    navigate(`/carro/${car.id}`)
   }
 
-  // const [showGallery, setShowGallery] = useState(false)
+  const handleStartReservation = () => {
+    navigate(`/carro/${car.id}/reserva`)
+  }
+
+  const [selectedImages, setSelectedImages] = useState([])
 
   const [isFavorite, setIsFavorite] = useState(false)
 
@@ -42,12 +49,19 @@ export function CarDetails({ carId }) {
 
   const { beforeToday } = DateRangePicker
 
+  const handleGoBack = () => {
+    window.history.back();
+  }
+
   return (
     <>
       <div className="car-det-block">
         <div className="car-det-header">
           <span className="car-det-header-text-rating">CARRO </span>
-          <h2 className="car-det-header-title">{car.name}</h2>
+          <h2 className="car-det-header-title">{car.name}  </h2>
+          <button className="btn-back" onClick={handleGoBack}><IoIosArrowBack /></button>
+          
+        
         </div>
 
         <div className="car-det-evaluation">
@@ -112,7 +126,6 @@ export function CarDetails({ carId }) {
                     </div>
                   </div>
                 )}
-
               </div>
             </div>
           </div>
@@ -208,7 +221,9 @@ export function CarDetails({ carId }) {
               <p className="text-reserva">
                 Adicione as datas da sua viagem para obter preços exatos
               </p>
-              <button className="btn-reserva">Iniciar reserva</button>
+              <button className="btn-reserva" onClick={handleStartReservation}>
+                Iniciar reserva
+              </button>
             </div>
           </div>
           <div className="map">

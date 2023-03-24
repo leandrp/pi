@@ -17,7 +17,7 @@ export function CardRecomendation() {
         <h2 className="title-card-recomendation">Recomendações</h2>
         <div className="card-recomendation-group">
           <div className="cars-list-recomendation">
-            {carsList.slice(4, 10).map(car => (
+            {carsList.slice(0, 10).map(car => (
               <div className="card-recomendation" key={car.id}>
                 <div className="card-recomendation-image">
                   <div className="card-recomendation-image-wrapper">
@@ -56,8 +56,8 @@ export function CardRecomendation() {
                       {car.description}
                     </p>
                     <p className="card-recomendation-text">{car.text}</p>
-                    {/* <Link to={`/carro/${car.id}`}> */}
-                    <Link to="/carro">
+                    <Link to={`/carro/${car.id}`}>
+                    {/* <Link to="/carro/"> */}
                       <button>Ver mais</button>
                     </Link>
                   </div>
