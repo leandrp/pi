@@ -1,16 +1,5 @@
 import './styleRentCar.scss'
 import carsList from '../CarList/carsList'
-import {
-  FaMapMarkerAlt,
-  FaHeart,
-  FaShareAlt,
-  FaUser,
-  FaSnowflake,
-  FaCog,
-  FaCarSide,
-  FaSuitcase
-} from 'react-icons/fa'
-import { BiShieldQuarter } from 'react-icons/bi'
 import { DateRangePicker } from 'rsuite'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { useNavigate } from 'react-router-dom'
@@ -18,13 +7,15 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { RentCarForm } from '../RentCarForm/rentCarForm'
+import { format } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 
 export function RentCar() {
   const navigate = useNavigate()
 
-  const handleStartReservation = () => {
-    navigate(`/carro/${car.id}/reserva`)
-  }
+  // const handleStartReservation = () => {
+  //   navigate(`/carro/${car.id}/reserva`)
+  // }
 
   // const car = carsList.find(car => car.id === carId)
 
@@ -35,6 +26,17 @@ export function RentCar() {
   const handleGoBack = () => {
     window.history.back()
   }
+
+  const [dateRange, setDateRange] = useState([])
+
+  const handleDateRangeChange = value => {
+    setDateRange(value)
+  }
+
+  const date = new Date('2023-03-24T10:00:01Z')
+  const formattedDate = format(date, 'HH:mm', { locale: ptBR })
+
+  console.log(formattedDate) // Saída: 10:00
 
   return (
     <>
@@ -49,35 +51,52 @@ export function RentCar() {
 
         <div className="rent-car-det-text">
           <div className="rentcar-colum-1-content">
-            <div className="rent-car-det-text-content">
-              <h2 className="rent-car-det-text-title">Complete seus dados </h2>
-              <RentCarForm />
-            </div>
+            <h2 className="rent-car-det-text-title">Complete seus dados </h2>
+            <RentCarForm />
             <div className="calendar">
               <h2 className="calendar-text">
                 Selecione sua data e horário de reserva
               </h2>
-              <DateRangePicker
-                disabledDate={beforeToday()}
-                format="dd-MM-yyyy HH:mm"
-                locale={{
-                  sunday: 'Dom',
-                  monday: 'Seg',
-                  tuesday: 'Ter',
-                  wednesday: 'Qua',
-                  thursday: 'Qui',
-                  friday: 'Sex',
-                  saturday: 'Sab',
-                  ok: 'Aplicar',
-                  today: 'Hoje',
-                  yesterday: 'Ontem',
-                  hours: 'Horas',
-                  minutes: 'Minutos'
-                }}
-                placeholder="Data e Hora: Retidada | Devolução"
-                open={true}
-                className="custom-date-range-picker"
-              />
+              <div className="calendar-card">
+                <DateRangePicker
+                  disabledDate={beforeToday()}
+                  format="dd-MM-yyyy HH:mm"
+                  locale={{
+                    sunday: 'Dom',
+                    monday: 'Seg',
+                    tuesday: 'Ter',
+                    wednesday: 'Qua',
+                    thursday: 'Qui',
+                    friday: 'Sex',
+                    saturday: 'Sáb',
+                    ok: 'Aplicar',
+                    today: 'Hoje',
+                    yesterday: 'Ontem',
+                    hours: 'Horas',
+                    minutes: 'Minutos',
+                    dateFormat: 'dd/MM/yyyy',
+                    monthNames: [
+                      'Janeiro',
+                      'Fevereiro',
+                      'Março',
+                      'Abril',
+                      'Maio',
+                      'Junho',
+                      'Julho',
+                      'Agosto',
+                      'Setembro',
+                      'Outubro',
+                      'Novembro',
+                      'Dezembro'
+                    ],
+                    weekStartsOn: 0
+                  }}
+                  placeholder="Data e Hora: Retidada | Devolução"
+                  open={true}
+                  className="custom-date-range-picker"
+                  onChange={handleDateRangeChange}
+                />
+              </div>{' '}
             </div>
           </div>
 
@@ -111,11 +130,26 @@ export function RentCar() {
                 <p className="rent-car-det-description">{car.description}</p>
               </div>
               <div className="horizontal-line-card"></div>
+              <h3 className="check-in-title">
+                Retirada{' '}
+                <span className="check-in">
+                  {dateRange[0] ? dateRange[0].toLocaleString() : ''}
+                </span>
+              </h3>
               <div className="horizontal-line-card"></div>
+              <h3 className="check-out-title">
+                Devolução{' '}
+                <span className="check-out">
+                  {dateRange[1] ? dateRange[1].toLocaleString() : ''}
+                </span>
+              </h3>
               <div className="horizontal-line-card"></div>
-              <button className="btn-reserva" onClick={handleStartReservation}>
-                Iniciar reserva
-              </button>
+              {/* <button className="btn-reserva" onClick={handleStartReservation}>
+                Confirmar reserva
+              </button> */}
+              <Link to="/login-reserva" className="btn-reserva">
+                Confirmar reserva
+              </Link>
             </div>
           </div>
         </div>

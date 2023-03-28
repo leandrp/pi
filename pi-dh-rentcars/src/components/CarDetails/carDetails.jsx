@@ -18,6 +18,8 @@ import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io';
+import { Link } from 'react-router-dom'
+
 
 export function CarDetails({ carId }) {
   const navigate = useNavigate()
@@ -221,9 +223,12 @@ export function CarDetails({ carId }) {
               <p className="text-reserva">
                 Adicione as datas da sua viagem para obter preços exatos
               </p>
-              <button className="btn-reserva" onClick={handleStartReservation}>
+              {/* <button className="btn-reserva" onClick={handleStartReservation}>
                 Iniciar reserva
-              </button>
+              </button> */}
+              <Link to="/reserva" className="btn-reserva">
+                Iniciar reserva
+              </Link>.
             </div>
           </div>
           <div className="map">

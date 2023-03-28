@@ -272,6 +272,15 @@
           font-size: 16px;
           line-height: 19px;
           text-align: center;
+          text-decoration: none;
+          &:hover {
+            background-color: lighten(
+              #1dbeb4,
+              10%
+            );
+            text-decoration: none
+          }
+          
         }
       }
       .custom-date-range-picker {

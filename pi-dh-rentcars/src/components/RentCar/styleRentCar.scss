@@ -84,10 +84,8 @@
       color: #383b58;
     }
 
-    
     .rent-car-det-rating {
       text-align: right;
-
 
       .rent-car-det-note {
         position: absolute;
@@ -198,18 +196,33 @@
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 20px;
 
+    .rentcar-colum-1-content,
+    .rentcar-colum-2-content {
+      margin-bottom: 40px;
+    }
+
     .rent-car-det-text-title {
-      padding: 20px 40px 40px 40px;
+      padding: 20px 40px 35px 40px;
       color: #383b58;
       font-style: normal;
+      font-weight: 700;
       font-weight: 700;
       font-size: 24px;
       line-height: 28px;
     }
 
+  
+
     .calendar {
       height: 550px;
-      background: rgba(56, 59, 88, 0.1);
+      // background: rgba(56, 59, 88, 0.1);
+      .calendar-card {
+        margin: 0px 0px 10px 40px;
+        background-color: #fff;
+        width: 847px;
+        height: 450px;
+        border-radius: 10px;
+      }
       .calendar-text {
         padding: 44px 40px 40px 40px;
         color: #383b58;
@@ -233,24 +246,37 @@
           line-height: 19px;
           color: #4f4f50;
         }
-        .btn-reserva {
-          width: 360px;
-          height: 40px;
-          margin: 20px;
-          border-radius: 5px;
-          color: #fff;
-          background-color: #1dbeb4;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 19px;
-          text-align: center;
-        }
+        // .btn-reserva {
+        //   width: 360px;
+        //   height: 40px;
+        //   margin: 20px;
+        //   border-radius: 5px;
+        //   color: #fff;
+        //   background-color: #1dbeb4;
+        //   font-style: normal;
+        //   font-weight: 700;
+        //   font-size: 16px;
+        //   line-height: 19px;
+        //   text-align: center;
+        // }
       }
       .custom-date-range-picker {
         position: relative;
         width: 492px;
-        margin-left: 100px;
+        height: 10px;
+        top: 7.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: red;
+        opacity: 0; // faz o botão sumir
+
+        .rs-stack-item {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+        }
       }
     }
   }
@@ -301,7 +327,7 @@
 }
 
 .horizontal-line-card {
-  border-top: 1px solid #BEBEBE;
+  border-top: 1px solid #bebebe;
   max-width: 90%;
   margin: 10px auto 30px auto;
 }
@@ -314,3 +340,54 @@
 .rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
   display: none;
 }
+
+.btn-reserva {
+  background-color: #1dbeb4;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 365px;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    background-color: lighten(#1dbeb4, 10%);
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+
+
+h3.check-in-title,
+h3.check-out-title {
+  padding: 15px 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f4f50;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+span.check-in,
+span.check-out {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1dbeb4;
+  margin-left: auto;
+}
+

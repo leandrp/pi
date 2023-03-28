@@ -8,6 +8,8 @@ import { CarDetails } from './components/CarDetails/carDetails'
 import carsList from './components/CarList/carsList'
 import { RentCar } from './components/RentCar/rentCar'
 import { ScrollToTop } from './components/ScrollToTop/scrollToTop'
+import { RentCarConfirmation } from './components/RentCarConfirmation/rentCarConfirmation'
+import { LoginRentConfirmation } from './components/RentCarConfirmation/loginRentConfirmation'
 
 function App() {
 
@@ -49,6 +51,24 @@ function App() {
             <>
               <ScrollToTop />
               <RentCar />
+            </>
+          )
+        },
+        {
+          path: 'login-reserva',
+          element: (
+            <>
+              <ScrollToTop />
+              <LoginRentConfirmation />
+            </>
+          )
+        },
+        {
+          path: 'reserva-confirmada',
+          element: (
+            <>
+              <ScrollToTop />
+              <RentCarConfirmation />
             </>
           )
         },

@@ -1,0 +1,75 @@
+$color-primary: #1dbeb4;
+$color-secondary: #383b58;
+$color-tertiary: #545776;
+$color-quaternary: #f3f1ed;
+$color-quintenary: #ffffff;
+
+.confirmation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 638px;
+  height: 302px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-quintenary;
+  border: 1px solid #dfe4ea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 8px 8px;
+  padding: 10px;
+
+  i {
+    padding: 10px;
+    display: block;
+    font-size: 78px;
+    color: $color-primary;
+  }
+  .obrigado {
+    padding: 10px;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: $color-primary;
+  }
+  .obrigado-text {
+    padding: 10px;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: $color-secondary;
+  }
+  .btn-ok {
+    padding: 10px;
+    display: block;
+    height: 40px;
+    width: 206px;
+    border-radius: 5px;
+    background-color: $color-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $color-quintenary;
+    text-decoration: none;
+    &:hover {
+      background-color: lighten(#1dbeb4, 10%);
+      transition-duration: 0.3s;
+      text-decoration: none;
+      
+    }
+  }
+}

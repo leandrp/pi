@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Avatar from 'react-avatar'
 import { useUser } from '../../context/userContext'
 
+
 export function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -16,6 +17,12 @@ export function Login() {
     email: 'test@test.com',
     password: 'test123',
     name: 'Test User'
+  }
+
+  function getInitials(name) {
+    const parts = name.split(' ')
+    const initials = parts.map(part => part[0])
+    return initials.join('')
   }
 
   const { setUserData, userData } = useUser()
@@ -48,8 +55,12 @@ export function Login() {
             size={40}
             color="#F2B33D"
             fgColor="#ffffff"
+            bakgroundColor="#545776"
             className="avatar"
-          />
+            src=""
+          >
+            {getInitials(userName)}
+          </Avatar>
           <Link to="/">Home</Link>
           <Link to="/logout">Sair</Link>
         </div>
