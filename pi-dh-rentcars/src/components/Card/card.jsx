@@ -4,7 +4,7 @@ import carsList from '../CarList/carsList'
 //mudar nome para productCard
 export function Card() {
   return (
-    <>
+    <><div className='card-container'>
       <h2 className="title-card">Busque carros por grupo de conforto</h2>
       <div className="card-group">
         <ul className="cars-list">
@@ -16,7 +16,7 @@ export function Card() {
             </li>
           ))}
         </ul>
-      </div>
+      </div></div>
     </>
   )
 }

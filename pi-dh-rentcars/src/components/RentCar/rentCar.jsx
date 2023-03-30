@@ -42,11 +42,13 @@ export function RentCar() {
     <>
       <div className="rent-car-det-block">
         <div className="rent-car-det-header">
-          <span className="rent-car-det-header-text-rating">CARRO </span>
-          <h2 className="rent-car-det-header-title">{car.name} </h2>
-          <button className="btn-back" onClick={handleGoBack}>
-            <IoIosArrowBack />
-          </button>
+          <div className="rent-car-det-header-container">
+            <span className="rent-car-det-header-text-rating">CARRO </span>
+            <h2 className="rent-car-det-header-title">{car.name} </h2>
+            <button className="btn-back" onClick={handleGoBack}>
+              <IoIosArrowBack />
+            </button>
+          </div>{' '}
         </div>
 
         <div className="rent-car-det-text">

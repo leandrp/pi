@@ -10,35 +10,41 @@
     top: 80px;
     right: 0;
     height: 60px;
-    padding: 8px 40px;
     background-color: #545776;
 
-    .rent-car-det-header-text-rating {
-      color: #f3f1ed;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 18px;
-      align-items: center;
-    }
+    &-container {
+      max-width: 1366px;
+      position: relative;
+      margin: auto;
+      padding: 8px 40px;
 
-    .rent-car-det-header-title {
-      color: #fff;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 28px;
-      align-items: center;
-    }
-    .btn-back {
-      position: absolute;
-      right: 30px;
-      top: 5px;
-      font-size: 48px;
-      color: #fff;
-      cursor: pointer;
-      background-color: transparent;
-      z-index: 10;
+      .rent-car-det-header-text-rating {
+        color: #f3f1ed;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+      }
+
+      .rent-car-det-header-title {
+        color: #fff;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        align-items: center;
+      }
+      .btn-back {
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        font-size: 48px;
+        color: #fff;
+        cursor: pointer;
+        background-color: transparent;
+        z-index: 10;
+      }
     }
   }
   .rent-car-det-header-card {
@@ -195,6 +201,10 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 20px;
+    max-width: 1366px;
+    position: relative;
+    margin: auto;
+    padding: 100px 40px;
 
     .rentcar-colum-1-content,
     .rentcar-colum-2-content {
@@ -210,8 +220,6 @@
       font-size: 24px;
       line-height: 28px;
     }
-
-  
 
     .calendar {
       height: 550px;
@@ -275,15 +283,15 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-
         }
       }
     }
   }
   .rules {
     background-color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     z-index: 1;
+    
     .rules-title {
       padding: 40px 40px 10px 40px;
       color: #383b58;
@@ -291,12 +299,19 @@
       font-weight: 700;
       font-size: 24px;
       line-height: 28px;
+      max-width: 1366px;
+      position: relative;
+      margin: auto;
     }
     .rules-text-columns {
+      padding-top: 20px;
       padding-bottom: 30px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
+      max-width: 1366px;
+      position: relative;
+      margin: auto;
 
       .rules-text-flex-title {
         padding: 10px 40px;
@@ -305,6 +320,7 @@
         font-size: 20px;
         line-height: 23px;
         color: #545776;
+        
       }
       .rules-text-flex-par {
         padding: 10px 40px;
@@ -324,6 +340,8 @@
   border-top: 1px solid #1dbeb4;
   margin-top: 10px;
   margin-bottom: 30px;
+  max-width: 1366px;
+  margin: auto;
 }
 
 .horizontal-line-card {
@@ -365,8 +383,6 @@
   }
 }
 
-
-
 h3.check-in-title,
 h3.check-out-title {
   padding: 15px 40px;
@@ -390,4 +406,3 @@ span.check-out {
   color: #1dbeb4;
   margin-left: auto;
 }
-

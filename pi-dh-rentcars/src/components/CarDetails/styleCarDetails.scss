@@ -3,393 +3,405 @@
   width: 100%;
   position: absolute;
   align-items: center;
+  // margin: auto;
+  // max-width: 1366px;
 
   .car-det-header {
     position: relative;
     top: 80px;
     right: 0;
     height: 60px;
-    padding: 8px 40px;
     background-color: #545776;
 
-    .car-det-header-text-rating {
-      color: #f3f1ed;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 18px;
-      align-items: center;
-    }
+    .car-det-header-container {
+      max-width: 1366px;
+      position: relative;
+      margin: auto;
+      padding: 8px 40px;
 
-    .car-det-header-title {
-      color: #fff;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 28px;
-      align-items: center;
-    }
-    .btn-back{
-      position: absolute;
-      right: 30px;
-      top: 5px;
-      font-size: 48px;
-      color: #fff;
-      cursor: pointer;
-      background-color: transparent;
+      .car-det-header-text-rating {
+        color: #f3f1ed;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+      }
+
+      .car-det-header-title {
+        color: #fff;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        align-items: center;
+      }
+      .btn-back {
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        font-size: 48px;
+        color: #fff;
+        cursor: pointer;
+        background-color: transparent;
+      }
     }
   }
-  
+
   .car-det-evaluation {
     position: relative;
     top: 80px;
     right: 0;
     height: 60px;
-    padding: 8px 40px;
     background-color: rgba(56, 59, 88, 0.1);
 
-    .car-det-description {
-      margin-top: 15px;
-      text-align: left;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      color: #383b58;
-    }
+    .car-det-evaluation-container {
+      max-width: 1366px;
+      position: relative;
+      margin: auto;
+      padding: 8px 40px;
 
-    .car-det-rating {
-      text-align: right;
-
-      .car-det-star {
-        position: absolute;
-        top: 28px;
-        right: 75px;
-        font-size: 20px;
-        color: #1dbeb4;
-        margin-right: 5px;
-        gap: 10px;
-      }
-      .car-det-note {
-        position: absolute;
-        top: 15px;
-        right: 40px;
-        width: 34px;
-        height: 34px;
-        padding: 3px;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        color: #f3f1ed;
-        background-color: #383b58;
-        border-radius: 10px;
-      }
-      .car-det-note-text {
-        position: absolute;
-        top: 10px;
-        right: 80px;
-        margin-top: 4px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
+      .car-det-description {
+        margin-top: 15px;
         text-align: left;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
         color: #383b58;
-        line-height: 1.5;
+      }
+
+      .car-det-rating {
+        text-align: right;
+
+        .car-det-star {
+          position: absolute;
+          top: 28px;
+          right: 75px;
+          font-size: 20px;
+          color: #1dbeb4;
+          margin-right: 5px;
+          gap: 10px;
+        }
+        .car-det-note {
+          position: absolute;
+          top: 15px;
+          right: 40px;
+          width: 34px;
+          height: 34px;
+          padding: 3px;
+          font-size: 20px;
+          font-weight: 700;
+          text-align: center;
+          color: #f3f1ed;
+          background-color: #383b58;
+          border-radius: 10px;
+        }
+        .car-det-note-text {
+          position: absolute;
+          top: 10px;
+          right: 80px;
+          margin-top: 4px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          text-align: left;
+          color: #383b58;
+          line-height: 1.5;
+        }
       }
     }
   }
 
-  .car-det-img-block {
-  
-    .car-det-img {
-      overflow: hidden;
-      align-items: bottom;
-      justify-content: space-between;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-  
-      .car-det-img-wrapper-1 {
-        margin: 120px 0px 15px 40px;
-        width: 638px;
-        height: 360px;
-        display: grid;
-        background-size: cover;
-        align-items: center;
+  .car-det-img-block-container {
+    max-width: 1366px;
+    position: relative;
+    margin: auto;
+
+    .icons {
+      position: relative;
+      top: 110px;
+      left: 40px;
+      color: #1dbeb4;
+      font-size: 20px;
+      display: block;
+    }
+
+    .car-det-img-block {
+      .car-det-img {
+        overflow: hidden;
+        align-items: bottom;
         justify-content: space-between;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-        }
-      }
-  
-      .car-det-img-wrapper-2 {
-        margin: 120px 40px 15px 0px;
         display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: repeat(2, 2fr);
-        gap: 10px;
-  
-        .car-det-img-item-btn {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          background-color: #1dbeb4;
-          color: #fff;
-          padding: 5px;
-          border-radius: 5px;
-        }
-        .car-det-img-item-btn:hover {
-          background-color: lighten(#1dbeb4, 10%);
-          transition-duration: 0.3s;
-          cursor: pointer;
-        }
-        .car-det-img-item {
-          width: 314px;
-          height: 175px;
-          display: flex;
-          position: relative;
-          
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        .car-det-img-wrapper-1 {
+          margin: 120px 0px 15px 40px;
+          width: 638px;
+          height: 360px;
+          display: grid;
+          background-size: cover;
+          align-items: center;
+          justify-content: space-between;
+
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
-
-            
-            
           }
+        }
 
-        
+        .car-det-img-wrapper-2 {
+          margin: 120px 40px 15px 0px;
+          display: grid;
+          grid-template-columns: repeat(2, 2fr);
+          grid-template-rows: repeat(2, 2fr);
+          gap: 10px;
+
+          .car-det-img-item-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #1dbeb4;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+          }
+          .car-det-img-item-btn:hover {
+            background-color: lighten(#1dbeb4, 10%);
+            transition-duration: 0.3s;
+            cursor: pointer;
+          }
+          .car-det-img-item {
+            width: 314px;
+            height: 175px;
+            display: flex;
+            position: relative;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
         }
       }
     }
-  }
 
-  .car-det-text {
-    margin-bottom: 80px;
-    .car-det-text-content {
-      .car-det-text-title {
-        padding: 20px 40px 40px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .car-det-text-text {
-        color: #4f4f50;
-        margin-bottom: 58px;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-
-        .car-det-text-text-paragraph {
-          margin-bottom: 1.5em;
-        }
-      }
-      .car-det-text-benefits {
-        padding: 0px 40px 20px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .icons-colum {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      
-        li {
-          width: 33.33%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          margin-bottom: 20px;
-      
-          svg {
-            margin-bottom: 10px;
-          }
-        }
-      }
-      .car-det-text-benefits-icons {
-        display: flex;
-        padding: 10px 40px;
-        color: #1dbeb4;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        text-decoration: none;
-        .icon-text {
+    .car-det-text {
+      margin-bottom: 80px;
+      .car-det-text-content {
+        .car-det-text-title {
+          padding: 20px 40px 40px 40px;
           color: #383b58;
-        }
-      }
-    }
-    .calendar {
-      height: 550px;
-      background: rgba(56, 59, 88, 0.1);
-      .calendar-text {
-        padding: 44px 40px 40px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .reserva-block {
-        background-color: #fff;
-        height: 149px;
-        width: 410px;
-        border-radius: 8px;
-        position: relative;
-        left: 60%;
-        .text-reserva {
-          padding: 15px 25px;
           font-style: normal;
           font-weight: 700;
-          font-size: 16px;
-          line-height: 19px;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .car-det-text-text {
           color: #4f4f50;
-        }
-        .btn-reserva {
-          width: 360px;
-          height: 40px;
-          margin: 20px;
-          border-radius: 5px;
-          color: #fff;
-          background-color: #1dbeb4;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 19px;
-          text-align: center;
-          text-decoration: none;
-          &:hover {
-            background-color: lighten(
-              #1dbeb4,
-              10%
-            );
-            text-decoration: none
-          }
-          
-        }
-      }
-      .custom-date-range-picker {
-        position: relative;
-        width: 492px;
-        margin-left: 100px;
-      }
-    }
-    .map {
-      .car-det-text-map {
-        padding: 20px 40px 10px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .city-map-title {
-        padding: 0px 40px 10px 40px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
-        color: #4f4f50;
-      }
-    }
-    .rules {
-      .rules-title {
-        padding: 20px 40px 10px 40px;
-        color: #383b58;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .rules-text-columns {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-
-        .rules-text-flex-title {
-          padding: 10px 40px;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 23px;
-          color: #545776;
-        }
-        .rules-text-flex-par {
-          padding: 10px 40px;
+          margin-bottom: 58px;
+          padding-left: 40px;
+          padding-right: 40px;
           font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
+
+          .car-det-text-text-paragraph {
+            margin-bottom: 1.5em;
+          }
+        }
+        .car-det-text-benefits {
+          padding: 0px 40px 20px 40px;
+          color: #383b58;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .icons-colum {
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          li {
+            width: 33.33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            svg {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .car-det-text-benefits-icons {
+          display: flex;
+          padding: 10px 40px;
+          color: #1dbeb4;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          text-decoration: none;
+          .icon-text {
+            color: #383b58;
+          }
+        }
+      }
+      .calendar {
+        height: 550px;
+        background: rgba(56, 59, 88, 0.1);
+        .calendar-text {
+          padding: 44px 40px 40px 40px;
+          color: #383b58;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .reserva-block {
+          background-color: #fff;
+          height: 149px;
+          width: 410px;
+          border-radius: 8px;
+          position: relative;
+          left: 60%;
+          .text-reserva {
+            padding: 15px 25px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #4f4f50;
+          }
+          .btn-reserva {
+            width: 360px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #1dbeb4;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            text-decoration: none;
+            &:hover {
+              background-color: lighten(#1dbeb4, 10%);
+              text-decoration: none;
+            }
+          }
+        }
+        .custom-date-range-picker {
+          position: relative;
+          width: 492px;
+          margin-left: 100px;
+        }
+      }
+      .map {
+        .car-det-text-map {
+          padding: 20px 40px 10px 40px;
+          color: #383b58;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .city-map-title {
+          padding: 0px 40px 10px 40px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
           color: #4f4f50;
+        }
+      }
+      .rules {
+        .rules-title {
+          padding: 20px 40px 10px 40px;
+          color: #383b58;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .rules-text-columns {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 20px;
+
+          .rules-text-flex-title {
+            padding: 10px 40px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #545776;
+          }
+          .rules-text-flex-par {
+            padding: 10px 40px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            color: #4f4f50;
+          }
         }
       }
     }
   }
-}
-
-.heart {
-  position: absolute;
-  top: 225px;
-  left: 40px;
-  color: #545776;
-  font-size: 20px;
-}
-.horizontal-line {
-  border-top: 1px solid #1dbeb4;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-
-.rs-btn.rs-btn-primary.rs-btn-sm {
-  background-color: #1dbeb4;
-  color: #fff;
-}
-
-.rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
-  display: none;
-}
-
-.gallery-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(56, 59, 88, 0.98);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
 
-  .gallery-content {
-    width: 638px;
-    height: 476px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: auto;
-    button{
-      color: #1dbeb4;
+  .horizontal-line {
+    border-top: 1px solid #1dbeb4;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .rs-btn.rs-btn-primary.rs-btn-sm {
+    background-color: #1dbeb4;
+    color: #fff;
+  }
+
+  .rs-btn.rs-btn-link.rs-btn-sm.rs-btn-disabled {
+    display: none;
+  }
+
+  .gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(56, 59, 88, 0.98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .gallery-content {
+      width: 638px;
+      height: 476px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: auto;
+      button {
+        color: #1dbeb4;
+      }
     }
   }
 }

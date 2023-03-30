@@ -1,179 +1,183 @@
-.cars-recomendation-block{
-  background-color: rgba(56, 59, 88, 0.1);
-  width: 100%;
+.cardrecomendation-container {
 
-.title-card-recomendation {
-  margin: 0 auto;
-  padding: 24px 40px 10px 40px;
-  color: #383b58;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  width: 100%;
-  max-width: 1366px;
-}
-.card-recomendation-group {
-  display: flex;
-  padding-bottom: 60px;
-  margin: 0 auto;
-  padding: 0px 40px 74px 40px;
-  width: 100%;
-  max-width: 1366px;
 
-  // desktop 1366x768px
-  .cars-list-recomendation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+  .cars-recomendation-block {
+    background-color: rgba(56, 59, 88, 0.1);
     width: 100%;
-
-    .card-recomendation {
-      width: 634px;
-      height: 283px;
+    
+    .title-card-recomendation {
+      margin: 0 auto;
+      padding: 24px 40px 10px 40px;
+      color: #383b58;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      width: 100%;
+      max-width: 1366px;
+    }
+    .card-recomendation-group {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      background-color: #fff;
+      padding-bottom: 60px;
+      margin: 0 auto;
+      padding: 0px 40px 74px 40px;
+      width: 100%;
+      max-width: 1366px;
 
-      &-image {
-        width: 311px;
-        height: 100%;
+      // desktop 1366x768px
+      .cars-list-recomendation {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        width: 100%;
 
-        .card-recomendation-image-wrapper {
-          position: relative;
-          width: 311;
-          height: 100%;
-        }
-
-        .card-recomendation-image-wrapper p {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          font-size: 24px;
-          color: #1dbeb4;
-          cursor: pointer;
-        }
-        img {
-          width: 311px;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 8px;
-        }
-      }
-
-      
-      &-content {
-        position: relative;
-        padding: 14px;
-        margin: 0;
-        
-        h2 {
-          font-size: 24px;
-          margin-bottom: 10px;
-        }
-        
-        p {
-          font-size: 16px;
-          line-height: 1.5;
-          margin-bottom: 20px;
-        }
-        .card-recomendation-note-wrapper {
-          position: absolute;
-          top: 5px;
-          right: 14px;
-          width: 34px;
-          height: 27px;
-          padding: 3px;
-          font-size: 16px;
-          font-weight: 700;
-          text-align: center;
-          color: #f3f1ed;
-          background-color: #383b58;
+        .card-recomendation {
+          width: 634px;
+          height: 283px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid #ddd;
           border-radius: 10px;
+          overflow: hidden;
+          background-color: #fff;
+
+          &-image {
+            width: 311px;
+            height: 100%;
+
+            .card-recomendation-image-wrapper {
+              position: relative;
+              width: 311;
+              height: 100%;
+            }
+
+            .card-recomendation-image-wrapper p {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              font-size: 24px;
+              color: #1dbeb4;
+              cursor: pointer;
+            }
+            img {
+              width: 311px;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+
+          &-content {
+            position: relative;
+            padding: 14px;
+            margin: 0;
+
+            h2 {
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-size: 16px;
+              line-height: 1.5;
+              margin-bottom: 20px;
+            }
+            .card-recomendation-note-wrapper {
+              position: absolute;
+              top: 5px;
+              right: 14px;
+              width: 34px;
+              height: 27px;
+              padding: 3px;
+              font-size: 16px;
+              font-weight: 700;
+              text-align: center;
+              color: #f3f1ed;
+              background-color: #383b58;
+              border-radius: 10px;
+            }
+
+            .card-recomendation-note-text-wrapper {
+              position: absolute;
+              top: 30px;
+              right: 14px;
+              margin-top: 4px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: left;
+              color: #383b58;
+            }
+            .text-rating {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 18px;
+              color: rgba(56, 59, 88, 0.5);
+            }
+            .card-recomendation-rating {
+              margin-bottom: 10px;
+
+              .card-recomendation-star {
+                font-size: 20px;
+                color: #1dbeb4;
+                margin-right: 5px;
+              }
+            }
+
+            button {
+              width: 296px;
+              height: 40px;
+              background: #1dbeb4;
+              color: #fff;
+              border-radius: 5px;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 19px;
+              cursor: pointer;
+              border: 1px solid #1dbeb4;
+
+              &:hover {
+                background-color: #fff;
+                color: #1dbeb4;
+                border: 1px solid #1dbeb4;
+              }
+            }
+          }
         }
-  
-        .card-recomendation-note-text-wrapper {
-          position: absolute;
-          top: 30px;
-          right: 14px;
-          margin-top: 4px;
+
+        .card-recomendation-title {
+          margin: 0px;
+          margin-top: -5px;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          color: #383b58;
+        }
+        .card-recomendation-description {
+          margin: 0px;
+          margin-top: -5px;
+          color: #383b58;
+          opacity: 0.6;
           font-style: normal;
           font-weight: 700;
           font-size: 14px;
           line-height: 16px;
-          text-align: left;
-          color: #383b58;
         }
-        .text-rating {
-          font-style: normal;
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 18px;
-          color: rgba(56, 59, 88, 0.5);
-        }
-        .card-recomendation-rating {
-          margin-bottom: 10px;
-
-          .card-recomendation-star {
-            font-size: 20px;
-            color: #1dbeb4;
-            margin-right: 5px;
-          }
-        }
-
-        button {
+        .card-recomendation-text {
           width: 296px;
-          height: 40px;
-          background: #1dbeb4;
-          color: #fff;
-          border-radius: 5px;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 19px;
-          cursor: pointer;
-          border: 1px solid #1dbeb4;
-
-          &:hover {
-            background-color: #fff;
-            color: #1dbeb4;
-            border: 1px solid #1dbeb4;
-          }
+          margin: 0px;
+          color: #383b58;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          // line-height: 0.5em;
         }
       }
     }
-
-    .card-recomendation-title {
-      margin: 0px;
-      margin-top: -5px;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 23px;
-      color: #383b58;
-    }
-    .card-recomendation-description {
-      margin: 0px;
-      margin-top: -5px;
-      color: #383b58;
-      opacity: 0.6;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-    }
-    .card-recomendation-text {
-      width: 296px;
-      margin: 0px;
-      color: #383b58;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      // line-height: 0.5em;
-    }
   }
-}}
+}
