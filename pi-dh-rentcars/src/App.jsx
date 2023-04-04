@@ -10,6 +10,7 @@ import { RentCar } from './components/RentCar/rentCar'
 import { ScrollToTop } from './components/ScrollToTop/scrollToTop'
 import { RentCarConfirmation } from './components/RentCarConfirmation/rentCarConfirmation'
 import { LoginRentConfirmation } from './components/RentCarConfirmation/loginRentConfirmation'
+import { Adm } from './pages/Adm/adm'
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
           )
         },
         {
-          path: 'create-account',
+          path: 'criar-conta',
           element: (
             <>
               <ScrollToTop />
@@ -69,6 +70,15 @@ function App() {
             <>
               <ScrollToTop />
               <RentCarConfirmation />
+            </>
+          )
+        },
+        {
+          path: 'adm',
+          element: (
+            <>
+              <ScrollToTop />
+              <Adm />
             </>
           )
         },

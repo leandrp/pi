@@ -1,0 +1,78 @@
+.dropzone {
+  // border: 2px dashed #999;
+  // border-radius: 5px;
+  padding: 20px;
+  // background-color: #007bff;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #4F4F50;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  // margin-bottom: 34px;
+  cursor: pointer;
+}
+
+.btn-images {
+  background-color: #1dbeb4;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken(
+      #1dbeb4,
+      10%
+    ); 
+  }
+}
+
+
+.dropzone .dz-message {
+  font-size: 1.5em;
+  margin: 1em 0;
+  
+}
+
+.aside-class{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #383b58;
+  margin-top: 15px;
+
+}
+
+.error-message {
+  color: #ff0000; /* vermelho */
+}
+
+.error-message-red {
+  color: #ff0000; /* vermelho */
+  // font-weight: bold;
+}

@@ -104,11 +104,13 @@ export function RentCar() {
 
           <div className="rentcar-colum-2-content">
             <div className="rentcar-colum-2-content-card">
-              <h2 className="rent-car-det-text-title">Detalhes da reserva</h2>
+              <h2 className="rent-car-det-text-title card">
+                Detalhes da reserva
+              </h2>
               <div className="rent-car-det-img-block" key={car.id}>
                 <div className="rent-car-det-img">
                   <div className="rent-car-det-img-wrapper-1">
-                    <img src={car.image} alt={car.alt} />
+                    <img src={car.image1} alt={car.alt} />
                   </div>
                 </div>
               </div>
@@ -129,7 +131,7 @@ export function RentCar() {
                 </>
               </div>
               <div className="rent-car-det-evaluation">
-                <p className="rent-car-det-description">{car.description}</p>
+                <p className="rent-car-det-category">{car.category}</p>
               </div>
               <div className="horizontal-line-card"></div>
               <h3 className="check-in-title">

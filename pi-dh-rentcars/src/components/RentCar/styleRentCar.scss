@@ -81,7 +81,7 @@
     gap: 10px;
   }
   .rent-car-det-evaluation {
-    .rent-car-det-description {
+    .rent-car-det-category {
       margin: 40px;
       font-style: normal;
       font-weight: 500;
@@ -212,7 +212,7 @@
     }
 
     .rent-car-det-text-title {
-      padding: 20px 40px 35px 40px;
+      padding: 20px 40px 35px 0px;
       color: #383b58;
       font-style: normal;
       font-weight: 700;
@@ -221,18 +221,24 @@
       line-height: 28px;
     }
 
+    .rent-car-det-text-title.card {
+      padding-left: 40px;
+    }
+
+
+
     .calendar {
       height: 550px;
       // background: rgba(56, 59, 88, 0.1);
       .calendar-card {
-        margin: 0px 0px 10px 40px;
+        margin: 0px 0px 10px 0px;
         background-color: #fff;
         width: 847px;
         height: 450px;
         border-radius: 10px;
       }
       .calendar-text {
-        padding: 44px 40px 40px 40px;
+        padding: 44px 40px 40px 0px;
         color: #383b58;
         font-style: normal;
         font-weight: 700;
@@ -291,7 +297,7 @@
     background-color: #fff;
     margin-bottom: 60px;
     z-index: 1;
-    
+
     .rules-title {
       padding: 40px 40px 10px 40px;
       color: #383b58;
@@ -320,7 +326,6 @@
         font-size: 20px;
         line-height: 23px;
         color: #545776;
-        
       }
       .rules-text-flex-par {
         padding: 10px 40px;

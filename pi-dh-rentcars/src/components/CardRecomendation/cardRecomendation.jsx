@@ -22,7 +22,7 @@ export function CardRecomendation() {
                 <div className="card-recomendation" key={car.id}>
                   <div className="card-recomendation-image">
                     <div className="card-recomendation-image-wrapper">
-                      <img src={car.image} alt={car.alt} />
+                      <img src={car.image1} alt={car.alt} />
                       <p onClick={handleToggleFavorite}>
                         {isFavorite ? (
                           <AiFillHeart className="favorite" />
@@ -56,10 +56,10 @@ export function CardRecomendation() {
                         </>
                       </div>
                       <h2 className="card-recomendation-title">{car.name}</h2>
-                      <p className="card-recomendation-description">
-                        {car.description}
+                      <p className="card-recomendation-category">
+                        {car.category}
                       </p>
-                      <p className="card-recomendation-text">{car.text}</p>
+                      <p className="card-recomendation-text">{car.descriptionP1.slice(0, 92)}...</p>
                       <Link to={`/carro/${car.id}`}>
                         {/* <Link to="/carro/"> */}
                         <button>Ver mais</button>

@@ -4,7 +4,6 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import carsList from '../CarList/carsList'
 import {
   FaMapMarkerAlt,
-  FaHeart,
   FaShareAlt,
   FaUser,
   FaSnowflake,
@@ -25,7 +24,7 @@ export function CarDetails({ carId }) {
 
   const handleSelectImages = () => {
     setSelectedImages([
-      { original: car.image, thumbnail: car.image },
+      { original: car.image1, thumbnail: car.image1 },
       { original: car.image2, thumbnail: car.image2 },
       { original: car.image3, thumbnail: car.image3 },
       { original: car.image4, thumbnail: car.image4 },
@@ -69,8 +68,8 @@ export function CarDetails({ carId }) {
 
         <div className="car-det-evaluation">
           <div className="car-det-evaluation-container">
-            <p className="car-det-description">
-              <FaMapMarkerAlt /> {car.description}
+            <p className="car-det-category">
+              <FaMapMarkerAlt /> {car.category}
             </p>
             <div className="car-det-rating">
               <>
@@ -90,7 +89,6 @@ export function CarDetails({ carId }) {
         </div>
 
         <div className="car-det-img-block-container">
-
           <div className="icons">
             <FaShareAlt />
             <span onClick={handleToggleFavorite}>
@@ -105,7 +103,7 @@ export function CarDetails({ carId }) {
           <div className="car-det-img-block" key={car.id}>
             <div className="car-det-img">
               <div className="car-det-img-wrapper-1">
-                <img src={car.image} alt={car.alt} />
+                <img src={car.image1} alt={car.alt} />
               </div>
               <div className="car-det-img-wrapper-2">
                 <div className="car-det-img-item">
@@ -150,29 +148,13 @@ export function CarDetails({ carId }) {
               </h2>
               <div className="car-det-text-text">
                 <p className="car-det-text-text-paragraph">
-                  O Fiat Uno 1.0 é um carro compacto que oferece economia e
-                  praticidade. Com um motor de 999 cm³ e 4 cilindros, ele produz
-                  75 cavalos de potência e torque máximo de 9,9 kgfm. Com uma
-                  transmissão manual de 5 velocidades, o Uno 1.0 atinge uma
-                  velocidade máxima de 161 km/h e acelera de 0 a 100 km/h em
-                  13,2 segundos. O carro possui capacidade para 5 passageiros e
-                  um porta-malas com capacidade para 290 litros.
+                {car.descriptionP1}
                 </p>
                 <p className="car-det-text-text-paragraph">
-                  Ele também vem equipado com ar-condicionado, direção
-                  hidráulica, vidros elétricos dianteiros, travas elétricas,
-                  sistema de som com CD player e rádio AM/FM, entre outros
-                  recursos. Em termos de segurança, o Fiat Uno 1.0 vem equipado
-                  com airbags frontais, freios ABS, cintos de segurança de 3
-                  pontos para todos os ocupantes e encostos de cabeça
-                  ajustáveis.
+                {car.descriptionP2}
                 </p>
                 <p className="car-det-text-text-paragraph">
-                  O carro também tem uma classificação de 3 estrelas no teste de
-                  segurança do Latin NCAP. Com um consumo de combustível de 12,5
-                  km/l na cidade e 14,2 km/l na estrada, o Fiat Uno 1.0 oferece
-                  uma boa relação custo-benefício para quem busca um carro
-                  econômico e prático para o dia a dia.
+                {car.descriptionP3}
                 </p>
               </div>
               <h2 className="car-det-text-benefits">
@@ -206,7 +188,7 @@ export function CarDetails({ carId }) {
               </div>
             </div>
             <div className="calendar">
-              <h2 className="calendar-text">Datas disponíveis</h2>
+              <h2 className="calendar-text-block">Datas disponíveis</h2>
               <DateRangePicker
                 disabledDate={beforeToday()}
                 format="dd-MM-yyyy HH:mm"

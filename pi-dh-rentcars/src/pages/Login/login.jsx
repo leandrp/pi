@@ -95,7 +95,7 @@ export function Login() {
           </form>
           <p className="register-link">
             Ainda não tem conta?
-            <Link to="/create-account"> Registre-se</Link>.
+            <Link to="/criar-conta"> Registre-se</Link>.
           </p>
         </div>
       )}

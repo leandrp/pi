@@ -24,8 +24,8 @@ function Header() {
         {userData.name}
         {userData.auth === false && (
           <>
-            {location.pathname !== '/create-account' && (
-              <Link to="/create-account">
+            {location.pathname !== '/criar-conta' && (
+              <Link to="/criar-conta">
                 <button className="btn-create-account padding">
                   Criar conta
                 </button>

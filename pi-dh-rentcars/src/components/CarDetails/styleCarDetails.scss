@@ -61,7 +61,7 @@
       margin: auto;
       padding: 8px 40px;
 
-      .car-det-description {
+      .car-det-category {
         margin-top: 15px;
         text-align: left;
         font-style: normal;
@@ -259,7 +259,7 @@
       .calendar {
         height: 550px;
         background: rgba(56, 59, 88, 0.1);
-        .calendar-text {
+        .calendar-text-block {
           padding: 44px 40px 40px 40px;
           color: #383b58;
           font-style: normal;
@@ -361,7 +361,6 @@
       }
     }
   }
-
 
   .horizontal-line {
     border-top: 1px solid #1dbeb4;

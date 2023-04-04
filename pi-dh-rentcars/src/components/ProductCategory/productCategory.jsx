@@ -1,5 +1,5 @@
 import './styleProductCategory.scss'
-import carsList from '../CarList/carsList';
+import carsList from '../CarList/carsList'
 
 export function ProductCategory() {
   return (
@@ -9,8 +9,8 @@ export function ProductCategory() {
         <ul className="cars-list">
           {carsList.slice(0, 4).map(car => (
             <li key={car.id} className="cards">
-              <img className="cards-img" src={car.image} alt={car.alt} />
-              <h2 className="cards-title">{car.description}</h2>
+              <img className="cards-img" src={car.image1} alt={car.alt} />
+              <h2 className="cards-title">{car.category}</h2>
               <p className="cards-text">{car.name}</p>
             </li>
           ))}
