@@ -226,7 +226,7 @@ export function CarDetails({ carId }) {
             <div className="map">
               <h2 className="car-det-text-map">Onde você vai estar?</h2>
               <div className="horizontal-line"></div>
-              <h3 className="city-map-title">Anhangabaú, São Paulo, SP</h3>
+              <h3 className="city-map-title"><FaMapMarkerAlt /> {`${car.city} | ${car.adress}`}</h3>
               <div>
                 <iframe
                   width="100%"
@@ -236,7 +236,7 @@ export function CarDetails({ carId }) {
                   center={{ lat: -23.5489, lng: -46.6388 }}
                   zoom={13}
                   allowFullScreen
-                  src={`https://www.google.com/maps/embed/v1/place?q=Estação+Anhangabaú+São+Paulo&zoom=16&key=AIzaSyCtSWMm6yq0vzHmatYjHjzTS7gbdk5o3YI`}
+                  src= {car.map}
                 ></iframe>
               </div>
             </div>

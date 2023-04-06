@@ -39,7 +39,9 @@ function Header() {
           </>
         )}
       </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtSWMm6yq0vzHmatYjHjzTS7gbdk5o3YI"></script>
     </header>
+
   )
 }
 

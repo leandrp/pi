@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   gap: 14px;
   width: 100%;
+  cursor: pointer;
 }
 .card-group .cars-list .cards {
   width: 310px;
