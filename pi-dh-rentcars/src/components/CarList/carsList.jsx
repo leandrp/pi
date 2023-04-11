@@ -56,7 +56,11 @@ const carsList = [
     category: 'Grupo A - Econômico',
     city: 'São Paulo - SP',
     adress: 'Rodovia Hélio Smidt, s/n - Cumbica, Guarulhos - SP, CEP: 07190-100',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7320.653974611009!2d-46.49512067253564!3d-23.448666893122894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a8fdf3ce3c3%3A0xb97e2442367a8b17!2sRod.%20H%C3%A9lio%20Smidt%20-%20Cumbica%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680740560815!5m2!1spt-BR!2sbr",
+    map: getMapLink('São Paulo - SP'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Fiat Uno 1.0 é um carro compacto que oferece economia e praticidade. Com um motor de 999 cm³ e 4 cilindros, ele produz 75 cavalos de potência e torque máximo de 9,9 kgfm. Com uma transmissão manual de 5 velocidades, o Uno 1.0 atinge uma velocidade máxima de 161 km/h e acelera de 0 a 100 km/h em 13,2 segundos. O carro possui capacidade para 5 passageiros e um porta-malas com capacidade para 290 litros.',
     descriptionP2: 'Ele também vem equipado com ar-condicionado, direção hidráulica, vidros elétricos dianteiros, travas elétricas, sistema de som com CD player e rádio AM/FM, entre outros recursos. Em termos de segurança, o Fiat Uno 1.0 vem equipado com airbags frontais, freios ABS, cintos de segurança de 3 pontos para todos os ocupantes e encostos de cabeça ajustáveis.',
     descriptionP3: 'O carro também tem uma classificação de 3 estrelas no teste de segurança do Latin NCAP. Com um consumo de combustível de 12,5 km/l na cidade e 14,2 km/l na estrada, o Fiat Uno 1.0 oferece uma boa relação custo-benefício para quem busca um carro econômico e prático para o dia a dia.',
@@ -76,7 +80,11 @@ const carsList = [
     category: 'Grupo B - Conforto',
     city: 'Rio de Janeiro - RJ',
     adress: 'Av. Vinte de Janeiro, S/N - Ilha do Governador, Rio de Janeiro - RJ, CEP: 21941-570',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.679377232765!2d-43.246114084953106!3d-22.814341340314655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99798ef85b9049%3A0x1aa0a59f717077c8!2sAv.%20Vinte%20de%20Janeiro%20-%20Gale%C3%A3o%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021941-570!5e0!3m2!1spt-BR!2sbr!4v1680740877827!5m2!1spt-BR!2sbr",
+    map: getMapLink('Rio de Janeiro - RJ'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Peugeot 208 Hatch é um carro compacto com design moderno e sofisticado, oferecendo um bom equilíbrio entre estilo e desempenho. Com um motor 1.6L de 118 cavalos de potência e torque máximo de 16,1 kgfm, o Peugeot 208 Hatch conta com uma transmissão automática de 6 velocidades ou manual de 5 velocidades. Ele acelera de 0 a 100 km/h em 11,6 segundos e atinge uma velocidade máxima de 190 km/h.',
     descriptionP2: 'O carro acomoda confortavelmente até 5 passageiros e possui um porta-malas com capacidade para 285 litros. Com um acabamento refinado, o Peugeot 208 Hatch vem equipado com ar-condicionado digital dual zone, direção elétrica, vidros elétricos dianteiros e traseiros, sistema de som com Bluetooth, USB e comandos no volante, entre outros recursos.',
     descriptionP3: 'Em termos de segurança, o Peugeot 208 Hatch recebeu 4 estrelas no teste de segurança do Latin NCAP, sendo equipado com airbags frontais, freios ABS, controle de estabilidade e tração, cintos de segurança de 3 pontos para todos os ocupantes e sistema ISOFIX para fixação de cadeirinhas infantis.',
@@ -98,7 +106,11 @@ const carsList = [
     category: 'Grupo C - Executivo',
     city: 'Brasília - DF',
     adress: 'Lago Sul, Brasília - DF, CEP: 71608-900',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15350.988947150916!2d-47.927039870698366!3d-15.869876684155411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2586f2647ec3%3A0xbe3950a72a722268!2sLago%20Sul%2C%20Bras%C3%ADlia%20-%20DF%2C%2071608-900!5e0!3m2!1spt-BR!2sbr!4v1680741125302!5m2!1spt-BR!2sbr",
+    map: getMapLink('Brasília - DF'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Toyota Corolla é um sedã médio que oferece conforto e tecnologia em um pacote completo. Com um motor 2.0L de 177 cavalos de potência e torque máximo de 21,4 kgfm, o Corolla conta com uma transmissão automática CVT de 10 velocidades, oferecendo uma excelente performance e eficiência energética. Ele acelera de 0 a 100 km/h em 9,7 segundos e atinge uma velocidade máxima de 200 km/h.',
     descriptionP2: 'O carro acomoda confortavelmente até 5 passageiros e possui um porta-malas com capacidade para 470 litros. Com um acabamento refinado, o Toyota Corolla vem equipado com ar-condicionado digital dual zone, direção elétrica, vidros elétricos dianteiros e traseiros, sistema de som com Bluetooth, USB e comandos no volante, entre outros recursos.',
     descriptionP3: 'Em termos de segurança, o Corolla recebeu 5 estrelas no teste de segurança do Latin NCAP, sendo equipado com airbags frontais, laterais e de cortina, freios ABS, controle de estabilidade e tração, câmera de ré, cintos de segurança de 3 pontos para todos os ocupantes e sistema ISOFIX para fixação de cadeirinhas infantis.',
@@ -119,7 +131,11 @@ const carsList = [
     category: 'Grupo D - Luxo',
     city: 'Belo Horizonte - MG',
     adress: 'Rodovia MG-10, Km 39, Confins - MG, CEP: 33500-900',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2339882526526!2d-43.4770082751769!3d-19.097388276531376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf670a1ec375f9%3A0x1656d23c8cf38fed!2sAutoPark%20BH%20Airport!5e0!3m2!1spt-BR!2sbr!4v1680741034355!5m2!1spt-BR!2sbr",
+    map: getMapLink('Belo Horizonte - MG'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Mitsubishi Pajero é um SUV de alta performance projetado para oferecer conforto e desempenho em qualquer tipo de terreno. Com um motor V6 de 3.5 litros que produz 205 cavalos de potência e torque máximo de 30 kgfm, o Pajero oferece uma excelente dirigibilidade e capacidade off-road. Ele conta com uma transmissão automática de 5 velocidades e tração nas quatro rodas, proporcionando uma ótima performance em qualquer situação.',
     descriptionP2: 'Com capacidade para até 7 passageiros e um porta-malas com capacidade de 1.025 litros, o Pajero oferece espaço e conforto para toda a família. Ele vem equipado com ar-condicionado digital, direção hidráulica, vidros elétricos, travas elétricas, sistema de som com CD player e rádio AM/FM, entre outros recursos.',
     descriptionP3: 'Em termos de segurança, o Pajero vem equipado com airbags frontais, laterais e de cortina, freios ABS, controle de estabilidade e tração, cintos de segurança de 3 pontos para todos os ocupantes e sistema de fixação de cadeirinhas infantis ISOFIX. Além disso, o Pajero recebeu 5 estrelas no teste de segurança do Latin NCAP.',
@@ -141,7 +157,11 @@ const carsList = [
     category: 'Grupo A - Econômico',
     city: 'Salvador - BA',
     adress: 'Praça Gago Coutinho, S/N - São Cristóvão, Salvador - BA, CEP: 41520-970',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.899805216418!2d-38.33864418512929!3d-12.914160862157035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161635c39b0af5%3A0x991a0804fe1e586c!2sPra%C3%A7a%20Gago%20Coutinho%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Salvador%20-%20BA%2C%2041510-045!5e0!3m2!1spt-BR!2sbr!4v1680741228403!5m2!1spt-BR!2sbr",
+    map: getMapLink('Salvador - BA'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Fiat Argo é um carro hatch compacto que oferece um ótimo conjunto de atributos para os seus usuários. Com um motor 1.0 Firefly de 3 cilindros, ele produz 77 cavalos de potência e torque máximo de 10,9 kgfm, que aliados à transmissão manual de 5 velocidades, garantem um bom desempenho ao carro. Além disso, o Argo conta com opções de motorização mais potentes, como o 1.3 Firefly e o 1.8 E.torQ, que garantem ainda mais performance ao veículo.',
     descriptionP2: 'O Fiat Argo é um carro bastante espaçoso, com capacidade para 5 passageiros e um porta-malas com capacidade para 300 litros, que é suficiente para transportar bagagens de médio porte. Ele também vem equipado com ar-condicionado, direção elétrica progressiva, vidros elétricos dianteiros e traseiros, travas elétricas, sistema de som com CD player e rádio AM/FM com Bluetooth, entre outros recursos.',
     descriptionP3: 'Em termos de segurança, o Fiat Argo vem equipado com airbags frontais e laterais, freios ABS, cintos de segurança de 3 pontos para todos os ocupantes e encostos de cabeça ajustáveis. O carro ainda conta com uma série de recursos de segurança avançados, como o controle eletrônico de estabilidade (ESC) e o controle de tração (TC), que garantem uma maior estabilidade e segurança ao dirigir.',
@@ -163,7 +183,11 @@ const carsList = [
     category: 'Grupo A - Econômico',
     city: 'São Paulo - SP',
     adress: 'Rodovia Hélio Smidt, s/n - Cumbica, Guarulhos - SP, CEP: 07190-100',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7320.653974611009!2d-46.49512067253564!3d-23.448666893122894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a8fdf3ce3c3%3A0xb97e2442367a8b17!2sRod.%20H%C3%A9lio%20Smidt%20-%20Cumbica%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680740560815!5m2!1spt-BR!2sbr",
+    map: getMapLink('São Paulo - SP'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     text: 'O Voyage é um carro com boas médias de consumo e oferece ótima conectividade no pacote opci...',
     rating: 3,
     note: 5,
@@ -184,7 +208,11 @@ const carsList = [
     category: 'Grupo A - Econômico',
     city: 'Rio de Janeiro - RJ',
     adress: 'Av. Vinte de Janeiro, S/N - Ilha do Governador, Rio de Janeiro - RJ, CEP: 21941-570',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.679377232765!2d-43.246114084953106!3d-22.814341340314655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99798ef85b9049%3A0x1aa0a59f717077c8!2sAv.%20Vinte%20de%20Janeiro%20-%20Gale%C3%A3o%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021941-570!5e0!3m2!1spt-BR!2sbr!4v1680740877827!5m2!1spt-BR!2sbr",
+    map: getMapLink('Rio de Janeiro - RJ'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Fiat Cronos é um sedan compacto que apresenta um design moderno e elegante. Com opções de motorização 1.3 e 1.8, o modelo oferece desempenho e eficiência. O motor 1.3 produz 101 cavalos de potência e torque máximo de 13,7 kgfm, enquanto o motor 1.8 gera 139 cavalos de potência e torque máximo de 19,3 kgfm.',
     descriptionP2: 'O Fiat Cronos conta com uma transmissão manual de 5 velocidades ou uma transmissão automática de 6 velocidades. Ele possui capacidade para 5 passageiros e um porta-malas com capacidade para 525 litros, um dos maiores da categoria.',
     descriptionP3: 'O modelo também é equipado com diversos itens de série, como ar-condicionado, direção elétrica, vidros elétricos dianteiros e traseiros, travas elétricas, sistema de som com USB e Bluetooth, entre outros recursos. Em termos de segurança, o Fiat Cronos vem equipado com airbags frontais, freios ABS, cintos de segurança de 3 pontos para todos os ocupantes e encostos de cabeça ajustáveis.',
@@ -205,7 +233,11 @@ const carsList = [
     category: 'Grupo B - Conforto',
     city: 'Belo Horizonte - MG',
     adress: 'Rodovia MG-10, Km 39, Confins - MG, CEP: 33500-900',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2339882526526!2d-43.4770082751769!3d-19.097388276531376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf670a1ec375f9%3A0x1656d23c8cf38fed!2sAutoPark%20BH%20Airport!5e0!3m2!1spt-BR!2sbr!4v1680741034355!5m2!1spt-BR!2sbr",
+    map: getMapLink('Belo Horizonte - MG'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Citroen C4 é um carro compacto que oferece um bom equilíbrio entre desempenho e conforto. Com um motor de 1.6L e 4 cilindros, ele produz 118 cavalos de potência e torque máximo de 16,1 kgfm. Com uma transmissão manual de 5 velocidades, o C4 atinge uma velocidade máxima de 191 km/h e acelera de 0 a 100 km/h em 10,8 segundos. O carro possui capacidade para 5 passageiros e um porta-malas com capacidade para 408 litros.',
     descriptionP2: 'Ele também vem equipado com ar-condicionado digital, direção elétrica, vidros elétricos dianteiros e traseiros, travas elétricas, sistema de som com MP3 player e rádio AM/FM, entre outros recursos. Em termos de segurança, o Citroen C4 vem equipado com airbags frontais, laterais e de cortina, freios ABS, controle de estabilidade e tração, cintos de segurança de 3 pontos para todos os ocupantes e encostos de cabeça ajustáveis.',
     descriptionP3: 'O carro também tem uma classificação de 4 estrelas no teste de segurança do Latin NCAP. Com um consumo de combustível de 10,5 km/l na cidade e 13,4 km/l na estrada, o Citroen C4 oferece um bom equilíbrio entre economia e desempenho, além de um conforto agradável para quem busca um carro compacto para uso diário.',
@@ -226,7 +258,11 @@ const carsList = [
     category: 'Grupo C - Executivo',
     city: 'São Paulo - SP',
     adress: 'Rodovia Hélio Smidt, s/n - Cumbica, Guarulhos - SP, CEP: 07190-100',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7320.653974611009!2d-46.49512067253564!3d-23.448666893122894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a8fdf3ce3c3%3A0xb97e2442367a8b17!2sRod.%20H%C3%A9lio%20Smidt%20-%20Cumbica%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680740560815!5m2!1spt-BR!2sbr",
+    map: getMapLink('São Paulo - SP'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Jeep Renegade é um SUV compacto que oferece uma combinação de estilo off-road e conforto urbano. Com um motor 1.8L Flex de até 139 cavalos de potência, ele pode ter uma transmissão manual de 5 velocidades ou automática de 6 velocidades. O Renegade também está disponível com um motor 2.0L turbodiesel de até 170 cavalos de potência, que vem apenas com a transmissão automática.',
     descriptionP2: 'O carro possui capacidade para 5 passageiros e um porta-malas com capacidade para 320 litros, expandível para 1.281 litros com os bancos traseiros rebatidos. Ele também vem equipado com ar-condicionado, direção elétrica, vidros elétricos dianteiros e traseiros, travas elétricas, sistema de som com Bluetooth e entrada USB, entre outros recursos.',
     descriptionP3: 'Em termos de segurança, o Jeep Renegade vem equipado com airbags frontais, laterais e de cortina, freios ABS, controle de tração e estabilidade, assistente de partida em rampa e sistema Isofix para fixação de cadeirinhas infantis.',
@@ -247,7 +283,11 @@ const carsList = [
     category: 'Grupo D - Luxo',
     city: 'São Paulo - SP',
     adress: 'Rodovia Hélio Smidt, s/n - Cumbica, Guarulhos - SP, CEP: 07190-100',
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7320.653974611009!2d-46.49512067253564!3d-23.448666893122894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a8fdf3ce3c3%3A0xb97e2442367a8b17!2sRod.%20H%C3%A9lio%20Smidt%20-%20Cumbica%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680740560815!5m2!1spt-BR!2sbr",
+    map: getMapLink('São Paulo - SP'),
+    availability: {
+      startDate: new Date(),
+      endDate: new Date(),
+      },
     descriptionP1: 'O Mercedes-Benz GLA 250 é um SUV compacto de luxo que oferece uma combinação única de estilo, desempenho e tecnologia. Com um motor de 2.0 litros e 4 cilindros, ele produz 221 cavalos de potência e torque máximo de 350 Nm. Com uma transmissão automática de 8 velocidades e sistema de tração integral 4MATIC, o GLA 250 atinge uma velocidade máxima de 240 km/h e acelera de 0 a 100 km/h em apenas 6,6 segundos.',
     descriptionP2: 'O carro possui capacidade para 5 passageiros e um porta-malas com capacidade para 435 litros, podendo ser expandido para até 1.430 litros com os bancos traseiros rebatidos. Ele também vem equipado com uma variedade de recursos tecnológicos, como sistema de som premium, sistema de navegação, tela touchscreen de 7 polegadas, Apple CarPlay e Android Auto, entre outros.',
     descriptionP3: 'Em termos de segurança, o GLA 250 vem equipado com uma ampla gama de recursos avançados, como airbags frontais, laterais e de cortina, controle de estabilidade, sistema de alerta de colisão frontal, sistema de alerta de ponto cego e assistente de estacionamento ativo. Ele também possui uma classificação de 5 estrelas no teste de segurança do Euro NCAP.',
@@ -264,4 +304,16 @@ const carsList = [
   }
 ]
 
+function getMapLink(city) {
+  if (city === 'São Paulo - SP') {
+    return 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7320.653974611009!2d-46.49512067253564!3d-23.448666893122894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a8fdf3ce3c3%3A0xb97e2442367a8b17!2sRod.%20H%C3%A9lio%20Smidt%20-%20Cumbica%2C%20Guarulhos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680740560815!5m2!1spt-BR!2sbr';
+  } else if (city === 'Rio de Janeiro - RJ') {
+    return 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.679377232765!2d-43.246114084953106!3d-22.814341340314655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99798ef85b9049%3A0x1aa0a59f717077c8!2sAv.%20Vinte%20de%20Janeiro%20-%20Gale%C3%A3o%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021941-570!5e0!3m2!1spt-BR!2sbr!4v1680740877827!5m2!1spt-BR!2sbr';
+  } else if (city === 'Brasília - DF') {
+    return 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15350.988947150916!2d-47.927039870698366!3d-15.869876684155411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2586f2647ec3%3A0xbe3950a72a722268!2sLago%20Sul%2C%20Bras%C3%ADlia%20-%20DF%2C%2071608-900!5e0!3m2!1spt-BR!2sbr!4v1680741125302!5m2!1spt-BR!2sbr';
+  } else if (city === 'Belo Horizonte - MG') {
+    return 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2339882526526!2d-43.4770082751769!3d-19.097388276531376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf670a1ec375f9%3A0x1656d23c8cf38fed!2sAutoPark%20BH%20Airport!5e0!3m2!1spt-BR!2sbr!4v1680741034355!5m2!1spt-BR!2sbr'
+  } else if (city === 'Salvador - BA') {
+    return 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.899805216418!2d-38.33864418512929!3d-12.914160862157035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161635c39b0af5%3A0x991a0804fe1e586c!2sPra%C3%A7a%20Gago%20Coutinho%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Salvador%20-%20BA%2C%2041510-045!5e0!3m2!1spt-BR!2sbr!4v1680741228403!5m2!1spt-BR!2sbr'}}
+    
 export default carsList

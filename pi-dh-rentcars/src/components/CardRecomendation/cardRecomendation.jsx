@@ -1,87 +1,26 @@
-import './styleCardRecomendation.scss';
-import { useState } from 'react';
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
-import carsList from '../CarList/carsList';
-import { Link } from 'react-router-dom';
+import './styleCardRecomendation.scss'
+import carsList from '../CarList/carsList'
+import { Card } from '../Card/card'
 
 export function CardRecomendation({ selectedCategory }) {
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  const handleToggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
   const filteredCars = selectedCategory
-    ? carsList.filter((car) => car.category === selectedCategory)
-    : carsList;
+    ? carsList.filter(car => car.category === selectedCategory)
+    : carsList
 
   return (
     <div className="cardrecomendation-container">
       <div className="cars-recomendation-block">
-        <h2 className="title-card-recomendation">{selectedCategory}</h2>
+        <h2 className="title-card-recomendation">
+          Recomendações: {selectedCategory}
+        </h2>
         <div className="card-recomendation-group">
           <div className="cars-list-recomendation">
-            {filteredCars.slice(0, 10).map((car) => (
-              <div
-                key={car.id}
-                className={`card-recomendation ${
-                  selectedCategory && car.category !== selectedCategory
-                    ? 'card-recomendation-disabled'
-                    : ''
-                }`}
-              >
-                <div className="card-recomendation-image">
-                  <div className="card-recomendation-image-wrapper">
-                    <img src={car.image1} alt={car.alt} />
-                    <p onClick={handleToggleFavorite}>
-                      {isFavorite ? (
-                        <AiFillHeart className="favorite" />
-                      ) : (
-                        <AiOutlineHeart className="not-favorite" />
-                      )}
-                    </p>
-                  </div>
-                </div>
-                <div className="card-recomendations-wrapper">
-                  <div className="card-recomendation-content">
-                    <div className="card-recomendation-note-wrapper">
-                      {car.note}
-                    </div>{' '}
-                    <p className="card-recomendation-note-text-wrapper">
-                      {car.notetext}
-                    </p>{' '}
-                    <div className="card-recomendation-rating">
-                      <>
-                        <span className="text-rating">CARRO </span>
-                        {Array(car.rating)
-                          .fill()
-                          .map((_, id) => (
-                            <span
-                              key={id}
-                              className="card-recomendation-star"
-                            >
-                              &#9733;
-                            </span>
-                          ))}
-                      </>
-                    </div>
-                    <h2 className="card-recomendation-title">{car.name}</h2>
-                    <p className="card-recomendation-category">
-                      {car.category}
-                    </p>
-                    <p className="card-recomendation-text">
-                      {car.descriptionP1.slice(0, 92)}...
-                    </p>
-                    <Link to={`/carro/${car.id}`}>
-                      <button>Ver mais</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            {filteredCars.slice(0, 10).map(car => (
+              <Card key={car.id} car={car} isDisabled={selectedCategory && car.category !== selectedCategory} />
             ))}
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Avatar from 'react-avatar'
 import { useUser } from '../../context/userContext'
 
-
 export function LoginRentConfirmation() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -92,8 +91,8 @@ export function LoginRentConfirmation() {
               />
             </div>
             <Link to="/reserva-confirmada" className="btn-reserva">
-                Entrar
-              </Link>
+              Entrar
+            </Link>
             {/* <button type="submit">Entrar</button> */}
           </form>
           <p className="register-link">

@@ -5,7 +5,6 @@ import logo from '../../assets/logo/logo-grande.png'
 import { useUser } from '../../context/userContext'
 import './styleHeader.scss'
 
-
 function Header() {
   const location = useLocation()
   const { userData } = useUser()
@@ -13,9 +12,8 @@ function Header() {
   return (
     <header className="headerStyle">
       <div className="header_left">
-
         <Link to="/">
-          <img className='logo' src={logo} alt="Logo" />
+          <img className="logo" src={logo} alt="Logo" />
           <span className="slogan">RentCars</span>
         </Link>
       </div>
@@ -41,7 +39,6 @@ function Header() {
       </div>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtSWMm6yq0vzHmatYjHjzTS7gbdk5o3YI"></script>
     </header>
-
   )
 }
 

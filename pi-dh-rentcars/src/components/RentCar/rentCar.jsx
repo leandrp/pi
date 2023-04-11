@@ -1,6 +1,5 @@
 import './styleRentCar.scss'
 import carsList from '../CarList/carsList'
-import { DateRangePicker } from 'rsuite'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io'
@@ -9,6 +8,7 @@ import { useState } from 'react'
 import { RentCarForm } from '../RentCarForm/rentCarForm'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import CustomDateRangePicker from '../DataRangerPicker/customDateRangePicker'
 
 export function RentCar() {
   const navigate = useNavigate()
@@ -21,7 +21,6 @@ export function RentCar() {
 
   const car = carsList.find(car => car.id)
 
-  const { beforeToday } = DateRangePicker
 
   const handleGoBack = () => {
     window.history.back()
@@ -60,44 +59,12 @@ export function RentCar() {
                 Selecione sua data e horário de reserva
               </h2>
               <div className="calendar-card">
-                <DateRangePicker
-                  disabledDate={beforeToday()}
-                  format="dd-MM-yyyy HH:mm"
-                  locale={{
-                    sunday: 'Dom',
-                    monday: 'Seg',
-                    tuesday: 'Ter',
-                    wednesday: 'Qua',
-                    thursday: 'Qui',
-                    friday: 'Sex',
-                    saturday: 'Sáb',
-                    ok: 'Aplicar',
-                    today: 'Hoje',
-                    yesterday: 'Ontem',
-                    hours: 'Horas',
-                    minutes: 'Minutos',
-                    dateFormat: 'dd/MM/yyyy',
-                    monthNames: [
-                      'Janeiro',
-                      'Fevereiro',
-                      'Março',
-                      'Abril',
-                      'Maio',
-                      'Junho',
-                      'Julho',
-                      'Agosto',
-                      'Setembro',
-                      'Outubro',
-                      'Novembro',
-                      'Dezembro'
-                    ],
-                    weekStartsOn: 0
-                  }}
-                  placeholder="Data e Hora: Retidada | Devolução"
-                  open={true}
-                  className="custom-date-range-picker"
-                  onChange={handleDateRangeChange}
-                />
+              <CustomDateRangePicker
+              open={true}
+              className="custom-date-range-picker"
+              onChange={handleDateRangeChange} />
+
+ 
               </div>{' '}
             </div>
           </div>

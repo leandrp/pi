@@ -1,25 +1,14 @@
 import './styleproductCreateForm.scss'
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
-import carsList from '../CarList/carsList'
 import {
-  FaMapMarkerAlt,
-  FaHeart,
-  FaShareAlt,
   FaUser,
   FaSnowflake,
   FaCog,
   FaCarSide,
   FaSuitcase
 } from 'react-icons/fa'
-import { BiShieldQuarter } from 'react-icons/bi'
-import { DateRangePicker } from 'rsuite'
-import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
-import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io'
-import { Link } from 'react-router-dom'
-import React, { useState, useEffect } from 'react'
-import { CityList } from '../City/cityList'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import Popup from 'reactjs-popup'
@@ -190,6 +179,7 @@ export function ProductCreateForm() {
               <label className="label">
                 Cidade:
                 <div>
+
                   <select
                     className="input-city"
                     type="text"

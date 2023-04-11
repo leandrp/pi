@@ -57,17 +57,6 @@ function Accept() {
     </li>
   ))
 
-  // const fileRejectionItems = fileRejections.map(({ file, errors }) => (
-  //   <li key={file.path}>
-  //     {file.path} - {file.size} bytes
-  //     <ul>
-  //       {errors.map(e => (
-  //         <li key={e.code}>{e.message}</li>
-  //       ))}
-  //     </ul>
-  //   </li>
-  // ))
-
 
   const fileRejectionItems = fileRejections.map(({ file, errors }) => (
     <li key={file.path}>
@@ -98,7 +87,6 @@ function Accept() {
   ))
 
   useEffect(() => {
-    // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
     return () => {
       files.forEach(file => URL.revokeObjectURL(file.preview))
     }

@@ -6,6 +6,8 @@ import './styleHome.scss';
 
 export function Home() {
   const [selectedCategory, setSelectedCategory] = useState('');
+  
+  
 
   return (
     <div className="content">

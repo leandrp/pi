@@ -12,12 +12,12 @@ import {
   FaSuitcase
 } from 'react-icons/fa'
 import { BiShieldQuarter } from 'react-icons/bi'
-import { DateRangePicker } from 'rsuite'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowBack } from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import CustomDateRangePicker from '../DataRangerPicker/customDateRangePicker'
 
 export function CarDetails({ carId }) {
   const navigate = useNavigate()
@@ -47,7 +47,6 @@ export function CarDetails({ carId }) {
 
   const car = carsList.find(car => car.id === carId)
 
-  const { beforeToday } = DateRangePicker
 
   const handleGoBack = () => {
     window.history.back()
@@ -69,7 +68,7 @@ export function CarDetails({ carId }) {
         <div className="car-det-evaluation">
           <div className="car-det-evaluation-container">
             <p className="car-det-category">
-              <FaMapMarkerAlt /> {car.category}
+              {car.category}
             </p>
             <div className="car-det-rating">
               <>
@@ -189,27 +188,10 @@ export function CarDetails({ carId }) {
             </div>
             <div className="calendar">
               <h2 className="calendar-text-block">Datas disponíveis</h2>
-              <DateRangePicker
-                disabledDate={beforeToday()}
-                format="dd-MM-yyyy HH:mm"
-                locale={{
-                  sunday: 'Dom',
-                  monday: 'Seg',
-                  tuesday: 'Ter',
-                  wednesday: 'Qua',
-                  thursday: 'Qui',
-                  friday: 'Sex',
-                  saturday: 'Sab',
-                  ok: 'Aplicar',
-                  today: 'Hoje',
-                  yesterday: 'Ontem',
-                  hours: 'Horas',
-                  minutes: 'Minutos'
-                }}
-                placeholder="Data e Hora: Retidada | Devolução"
-                open={true}
-                className="custom-date-range-picker"
-              />
+                        <CustomDateRangePicker
+                        open={true}
+                className="custom-date-range-picker" />
+
               <div className="reserva-block">
                 <p className="text-reserva">
                   Adicione as datas da sua viagem para obter preços exatos
